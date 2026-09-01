@@ -633,7 +633,7 @@ function initHeroSlider() {
     },
     {
       badge: "Child Company · Applied AI Partner",
-      title: "The Chief AI Officer for Public Institutions",
+      title: "Applied Artificial Intelligence for Public Institutions",
       leadText: "APLYD builds high-leverage artificial intelligence systems, predictive decision-support engines, and ethical AI sandboxes tailored for public sector leaders, government agencies, and utilities.",
       chips: [
         "AI Sandboxing & Governance",
