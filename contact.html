@@ -207,21 +207,13 @@
   </aside>
 
   <!-- Page Hero Banner -->
+  <!-- Page Hero Banner -->
   <section class="page-hero">
     <div class="wrap">
       <div class="page-hero-inner" data-reveal>
-        <div class="breadcrumbs">
-          <a href="index.html">Home</a>
-          <span class="breadcrumbs-sep">/</span>
-          <span>Contact</span>
-        </div>
-        <div class="page-hero-badge">
-          <span class="pill-glow-dot"></span>
-          <span>Get In Touch</span>
-        </div>
-        <h1 class="disp page-hero-title">Reach Out to Us</h1>
+        <h1 class="disp page-hero-title">Reach out to us</h1>
         <p class="body page-hero-lead">
-          Submit your comments, project scope, or inquiries and an Athena practice specialist will connect with you promptly.
+          Submit your comments or questions and an Athena representative will contact you shortly.
         </p>
       </div>
     </div>
@@ -233,48 +225,58 @@
       
       <!-- Left Column: Interactive Form -->
       <div class="insight-card" style="padding: 44px 40px;" data-reveal>
-        <h2 class="hd" style="font-size: 28px; color: var(--navy); margin-bottom: 8px;">Start a Conversation</h2>
+        <h2 class="hd" style="font-size: 28px; color: var(--navy); margin-bottom: 8px;">Reach out to us</h2>
         <p class="body" style="font-size: 15.5px; color: #4A538A; margin-bottom: 28px;">
-          Tell us about your organization and how we can support your evidence or policy goals.
+          Submit your comments or questions and an Athena representative will contact you shortly.
         </p>
 
         <form onsubmit="event.preventDefault(); document.getElementById('contact-form-success').style.display = 'block'; this.reset();" style="display: flex; flex-direction: column; gap: 20px;">
           <div>
             <label for="contact-name" style="display: block; font-size: 13.5px; font-weight: 700; color: var(--navy); margin-bottom: 6px;">Your Name *</label>
-            <input id="contact-name" type="text" placeholder="Dr. Jane Doe" required style="width: 100%; padding: 14px 16px; border: 1.5px solid var(--hair); border-radius: 8px; font-family: 'Lato', sans-serif; font-size: 15.5px; background: #fff;" />
+            <input id="contact-name" type="text" placeholder="Your Name" required style="width: 100%; padding: 14px 16px; border: 1.5px solid var(--hair); border-radius: 8px; font-family: inherit; font-size: 15.5px; background: #fff;" />
           </div>
 
           <div>
             <label for="contact-email" style="display: block; font-size: 13.5px; font-weight: 700; color: var(--navy); margin-bottom: 6px;">Work Email *</label>
-            <input id="contact-email" type="email" placeholder="jane.doe@organization.org" required style="width: 100%; padding: 14px 16px; border: 1.5px solid var(--hair); border-radius: 8px; font-family: 'Lato', sans-serif; font-size: 15.5px; background: #fff;" />
+            <input id="contact-email" type="email" placeholder="Your Email" required style="width: 100%; padding: 14px 16px; border: 1.5px solid var(--hair); border-radius: 8px; font-family: inherit; font-size: 15.5px; background: #fff;" />
           </div>
 
           <div>
-            <label for="contact-topic" style="display: block; font-size: 13.5px; font-weight: 700; color: var(--navy); margin-bottom: 6px;">Area of Interest / Service Need *</label>
-            <select id="contact-topic" required style="width: 100%; padding: 14px 16px; border: 1.5px solid var(--hair); border-radius: 8px; font-family: 'Lato', sans-serif; font-size: 15px; background: #fff; color: var(--navy);">
-              <option value="">Select an area...</option>
-              <option value="Discover: Primary Research &amp; Field Surveys">Discover: Primary Research &amp; Field Surveys</option>
-              <option value="Inform: MERLA &amp; Digital Analytics">Inform: MERLA &amp; Digital Analytics</option>
-              <option value="Transform: Embedded TSUs &amp; Policy Reform">Transform: Embedded TSUs &amp; Policy Reform</option>
-              <option value="Community Compass Field Logistics">Community Compass Field Logistics</option>
-              <option value="AI Sandboxing &amp; Digital Platforms">AI Sandboxing &amp; Digital Platforms</option>
-              <option value="Business Development &amp; RFP Scoping">Business Development &amp; RFP Scoping</option>
-              <option value="Careers &amp; Talent">Careers &amp; Talent</option>
-              <option value="Media &amp; Communications">Media &amp; Communications</option>
+            <label for="contact-topic" style="display: block; font-size: 13.5px; font-weight: 700; color: var(--navy); margin-bottom: 6px;">What are you looking for? *</label>
+            <select id="contact-topic" required style="width: 100%; padding: 14px 16px; border: 1.5px solid var(--hair); border-radius: 8px; font-family: inherit; font-size: 15px; background: #fff; color: var(--navy);">
+              <option value="">What are you looking for?</option>
+              <option value="Action Research, Collaboration, and Organizational Effectiveness">Action Research, Collaboration, and Organizational Effectiveness</option>
+              <option value="Digital Strategies for Monitoring and Learning">Digital Strategies for Monitoring and Learning</option>
+              <option value="Equitable Data and Digital Governance">Equitable Data and Digital Governance</option>
+              <option value="ESG and Sustainability Services">ESG and Sustainability Services</option>
+              <option value="Fit-for-purpose Evaluation">Fit-for-purpose Evaluation</option>
+              <option value="Impact Evaluation">Impact Evaluation</option>
+              <option value="Institutional Capacity Development">Institutional Capacity Development</option>
+              <option value="Investment Impact Simulation and Visualization">Investment Impact Simulation and Visualization</option>
+              <option value="Market Systems Modelling">Market Systems Modelling</option>
+              <option value="Regulatory Assessments">Regulatory Assessments</option>
+              <option value="Results-based Financing (RBF)">Results-based Financing (RBF)</option>
+              <option value="Strategies For Effective Data Generation and Use">Strategies For Effective Data Generation and Use</option>
+              <option value="Strengthening Digital Ecosystems">Strengthening Digital Ecosystems</option>
+              <option value="Utility Systems Strengthening">Utility Systems Strengthening</option>
+              <option value="Business Enquiries">Business Enquiries</option>
+              <option value="HR Enquiries">HR Enquiries</option>
+              <option value="Media Enquiries">Media Enquiries</option>
+              <option value="Newsletter Subscription">Newsletter Subscription</option>
             </select>
           </div>
 
           <div>
-            <label for="contact-msg" style="display: block; font-size: 13.5px; font-weight: 700; color: var(--navy); margin-bottom: 6px;">Project Overview or Message *</label>
-            <textarea id="contact-msg" rows="5" placeholder="Please outline the target geography, objectives, or questions..." required style="width: 100%; padding: 14px 16px; border: 1.5px solid var(--hair); border-radius: 8px; font-family: 'Lato', sans-serif; font-size: 15.5px; background: #fff; resize: vertical;"></textarea>
+            <label for="contact-msg" style="display: block; font-size: 13.5px; font-weight: 700; color: var(--navy); margin-bottom: 6px;">Your Message *</label>
+            <textarea id="contact-msg" rows="5" placeholder="Your Message" required style="width: 100%; padding: 14px 16px; border: 1.5px solid var(--hair); border-radius: 8px; font-family: inherit; font-size: 15.5px; background: #fff; resize: vertical;"></textarea>
           </div>
 
           <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; justify-content: center; margin-top: 8px;">
-            Send Inquiry <span>→</span>
+            Submit <span>→</span>
           </button>
 
           <div id="contact-form-success" style="display: none; padding: 16px; background: rgba(50, 168, 82, 0.1); border: 1px solid rgba(50, 168, 82, 0.3); border-radius: 8px; color: #1e7037; font-size: 15px; text-align: center;">
-            ✓ Thank you! Your message has been received. An Athena representative will be in touch shortly.
+            ✓ Form submitted. An Athena representative will contact you shortly.
           </div>
         </form>
       </div>
@@ -283,26 +285,26 @@
       <div style="display: flex; flex-direction: column; gap: 24px;" data-reveal style="transition-delay: 0.15s;">
         
         <div class="insight-card" style="padding: 32px;">
-          <div class="cap" style="color: var(--gold-deep); margin-bottom: 12px;">Direct Departmental Inquiries</div>
+          <div class="cap" style="color: var(--gold-deep); margin-bottom: 12px;">Important Contacts</div>
           
           <div style="display: flex; flex-direction: column; gap: 20px;">
             <div style="padding-bottom: 16px; border-bottom: 1px solid var(--hair);">
-              <div style="font-size: 15.5px; font-weight: 700; color: var(--navy); margin-bottom: 4px;">Business Development &amp; RFP Scoping:</div>
+              <div style="font-size: 15.5px; font-weight: 700; color: var(--navy); margin-bottom: 4px;">Business Related Queries:</div>
               <a href="mailto:cbd@athenainfonomics.com" class="ln" style="font-size: 15.5px; color: var(--gold-deep);">cbd@athenainfonomics.com <span>✉</span></a>
             </div>
 
             <div style="padding-bottom: 16px; border-bottom: 1px solid var(--hair);">
-              <div style="font-size: 15.5px; font-weight: 700; color: var(--navy); margin-bottom: 4px;">Communications &amp; Media:</div>
+              <div style="font-size: 15.5px; font-weight: 700; color: var(--navy); margin-bottom: 4px;">Communication or Media Queries:</div>
               <a href="mailto:communications@athenainfonomics.com" class="ln" style="font-size: 15.5px; color: var(--gold-deep);">communications@athenainfonomics.com <span>✉</span></a>
             </div>
 
             <div style="padding-bottom: 16px; border-bottom: 1px solid var(--hair);">
-              <div style="font-size: 15.5px; font-weight: 700; color: var(--navy); margin-bottom: 4px;">Careers &amp; Talent Acquisition:</div>
+              <div style="font-size: 15.5px; font-weight: 700; color: var(--navy); margin-bottom: 4px;">HR or Career Related Queries:</div>
               <a href="mailto:hr@athenainfonomics.com" class="ln" style="font-size: 15.5px; color: var(--gold-deep);">hr@athenainfonomics.com <span>✉</span></a>
             </div>
 
             <div>
-              <div style="font-size: 15.5px; font-weight: 700; color: var(--navy); margin-bottom: 4px;">Corporate Headquarters Phone:</div>
+              <div style="font-size: 15.5px; font-weight: 700; color: var(--navy); margin-bottom: 4px;">Phone:</div>
               <div style="font-size: 15.5px; color: #4A538A; font-weight: 600;">+91 44 – 423 27112</div>
             </div>
           </div>
@@ -311,7 +313,7 @@
         <div class="insight-card" style="padding: 32px; background: var(--offwhite);">
           <div class="cap" style="color: var(--navy); margin-bottom: 12px;">Global Operating Hubs</div>
           <p class="body" style="font-size: 15px; color: #4A538A; line-height: 1.6; margin-bottom: 16px;">
-            Athena operates across five primary strategic hubs with dedicated field leadership across South Asia, East Africa, and North America.
+            Athena operates across five primary strategic hubs with dedicated field leadership across South Asia, East Africa, Europe, and North America.
           </p>
           <div style="display: flex; gap: 8px; flex-wrap: wrap;">
             <span class="pill">Chennai HQ</span>
@@ -327,64 +329,112 @@
     </div>
   </section>
 
-  <!-- Global Office Hubs Directory -->
+  <!-- Global Office Hubs Directory with Live Timezone Clocks -->
   <section class="section" style="background: var(--paper); padding: 90px 0; border-top: 1px solid var(--hair);">
     <div class="wrap">
       <div style="max-width: 700px; margin-bottom: 48px;" data-reveal>
         <div class="cap" style="color: var(--gold-deep); margin-bottom: 10px;">Physical Locations</div>
-        <h2 class="hd" style="font-size: clamp(28px, 3.2vw, 40px);">Our Global Offices</h2>
+        <h2 class="hd" style="font-size: clamp(28px, 3.2vw, 40px);">Our Global Offices &amp; Live Timezones</h2>
+        <p class="body" style="margin-top: 10px; font-size: 16.5px;">
+          Working seamlessly across 5 global hubs to coordinate on-the-ground execution.
+        </p>
       </div>
 
       <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 30px;">
         
         <!-- Office 1: Chennai HQ -->
-        <div class="insight-card" style="padding: 32px;" data-reveal>
-          <div class="cap" style="color: var(--gold-deep); margin-bottom: 6px;">Global HQ · Asia</div>
-          <h3 class="sub" style="font-size: 20px; color: var(--navy); margin-bottom: 10px;">Chennai, India</h3>
-          <p class="body" style="font-size: 14.5px; line-height: 1.65; color: #4A538A; margin-bottom: 14px;">
+        <div class="office-hub-card" data-reveal>
+          <div class="office-hub-header">
+            <div>
+              <div class="cap" style="color: var(--gold-deep); margin-bottom: 4px; font-size: 11px;">Global HQ · Asia</div>
+              <h3 class="office-hub-city">Chennai, India</h3>
+            </div>
+            <div class="office-clock-badge">
+              <span class="office-clock-time" data-tz="Asia/Kolkata">--:-- --</span>
+            </div>
+          </div>
+          <p class="body" style="font-size: 14px; line-height: 1.65; color: #4A538A; margin-bottom: 16px;">
             15, First Floor, Karpagambal Nagar, Mylapore, Chennai, Tamil Nadu 600004, India
           </p>
-          <div style="font-size: 14px; font-weight: 700; color: var(--navy);">Tel: +91 44 – 423 27112</div>
+          <div style="margin-top: auto; padding-top: 14px; border-top: 1px solid var(--hair); font-size: 13.5px; font-weight: 700; color: var(--navy);">
+            Tel: +91 44 – 423 27112
+          </div>
         </div>
 
         <!-- Office 2: Washington D.C. -->
-        <div class="insight-card" style="padding: 32px;" data-reveal style="transition-delay: 0.1s;">
-          <div class="cap" style="color: var(--gold-deep); margin-bottom: 6px;">Americas Hub</div>
-          <h3 class="sub" style="font-size: 20px; color: var(--navy); margin-bottom: 10px;">Washington, D.C., USA</h3>
-          <p class="body" style="font-size: 14.5px; line-height: 1.65; color: #4A538A; margin-bottom: 14px;">
+        <div class="office-hub-card" data-reveal style="transition-delay: 0.1s;">
+          <div class="office-hub-header">
+            <div>
+              <div class="cap" style="color: var(--gold-deep); margin-bottom: 4px; font-size: 11px;">Americas Hub</div>
+              <h3 class="office-hub-city">Washington, D.C.</h3>
+            </div>
+            <div class="office-clock-badge">
+              <span class="office-clock-time" data-tz="America/New_York">--:-- --</span>
+            </div>
+          </div>
+          <p class="body" style="font-size: 14px; line-height: 1.65; color: #4A538A; margin-bottom: 16px;">
             1717 Pennsylvania Avenue NW, Suite 1025, Washington, DC 20006, United States
           </p>
-          <div style="font-size: 14px; font-weight: 700; color: var(--navy);">US Federal &amp; Multilateral Practice</div>
+          <div style="margin-top: auto; padding-top: 14px; border-top: 1px solid var(--hair); font-size: 13.5px; font-weight: 700; color: var(--navy);">
+            US Federal &amp; Multilateral Practice
+          </div>
         </div>
 
         <!-- Office 3: New Delhi -->
-        <div class="insight-card" style="padding: 32px;" data-reveal style="transition-delay: 0.2s;">
-          <div class="cap" style="color: var(--gold-deep); margin-bottom: 6px;">National Capital Hub</div>
-          <h3 class="sub" style="font-size: 20px; color: var(--navy); margin-bottom: 10px;">New Delhi, India</h3>
-          <p class="body" style="font-size: 14.5px; line-height: 1.65; color: #4A538A; margin-bottom: 14px;">
+        <div class="office-hub-card" data-reveal style="transition-delay: 0.2s;">
+          <div class="office-hub-header">
+            <div>
+              <div class="cap" style="color: var(--gold-deep); margin-bottom: 4px; font-size: 11px;">National Capital Hub</div>
+              <h3 class="office-hub-city">New Delhi, India</h3>
+            </div>
+            <div class="office-clock-badge">
+              <span class="office-clock-time" data-tz="Asia/Kolkata">--:-- --</span>
+            </div>
+          </div>
+          <p class="body" style="font-size: 14px; line-height: 1.65; color: #4A538A; margin-bottom: 16px;">
             Ground Floor, 26/1, East Patel Nagar, New Delhi 110008, India
           </p>
-          <div style="font-size: 14px; font-weight: 700; color: var(--navy);">Public Policy &amp; Central Advisory</div>
+          <div style="margin-top: auto; padding-top: 14px; border-top: 1px solid var(--hair); font-size: 13.5px; font-weight: 700; color: var(--navy);">
+            Public Policy &amp; Central Advisory
+          </div>
         </div>
 
         <!-- Office 4: London -->
-        <div class="insight-card" style="padding: 32px;" data-reveal>
-          <div class="cap" style="color: var(--gold-deep); margin-bottom: 6px;">Europe Hub</div>
-          <h3 class="sub" style="font-size: 20px; color: var(--navy); margin-bottom: 10px;">London, UK</h3>
-          <p class="body" style="font-size: 14.5px; line-height: 1.65; color: #4A538A; margin-bottom: 14px;">
+        <div class="office-hub-card" data-reveal>
+          <div class="office-hub-header">
+            <div>
+              <div class="cap" style="color: var(--gold-deep); margin-bottom: 4px; font-size: 11px;">Europe Hub</div>
+              <h3 class="office-hub-city">London, UK</h3>
+            </div>
+            <div class="office-clock-badge">
+              <span class="office-clock-time" data-tz="Europe/London">--:-- --</span>
+            </div>
+          </div>
+          <p class="body" style="font-size: 14px; line-height: 1.65; color: #4A538A; margin-bottom: 16px;">
             20-22 Wenlock Road, London, N1 7GU, United Kingdom
           </p>
-          <div style="font-size: 14px; font-weight: 700; color: var(--navy);">European Development Partnerships</div>
+          <div style="margin-top: auto; padding-top: 14px; border-top: 1px solid var(--hair); font-size: 13.5px; font-weight: 700; color: var(--navy);">
+            European Development Partnerships
+          </div>
         </div>
 
         <!-- Office 5: Nairobi -->
-        <div class="insight-card" style="padding: 32px;" data-reveal style="transition-delay: 0.1s;">
-          <div class="cap" style="color: var(--gold-deep); margin-bottom: 6px;">Africa Hub</div>
-          <h3 class="sub" style="font-size: 20px; color: var(--navy); margin-bottom: 10px;">Nairobi, Kenya</h3>
-          <p class="body" style="font-size: 14.5px; line-height: 1.65; color: #4A538A; margin-bottom: 14px;">
+        <div class="office-hub-card" data-reveal style="transition-delay: 0.1s;">
+          <div class="office-hub-header">
+            <div>
+              <div class="cap" style="color: var(--gold-deep); margin-bottom: 4px; font-size: 11px;">Africa Hub</div>
+              <h3 class="office-hub-city">Nairobi, Kenya</h3>
+            </div>
+            <div class="office-clock-badge">
+              <span class="office-clock-time" data-tz="Africa/Nairobi">--:-- --</span>
+            </div>
+          </div>
+          <p class="body" style="font-size: 14px; line-height: 1.65; color: #4A538A; margin-bottom: 16px;">
             The Mirage, Tower 2, 4th Floor, Chiromo Road, Westlands, Nairobi, Kenya
           </p>
-          <div style="font-size: 14px; font-weight: 700; color: var(--navy);">East &amp; Southern Africa Operations</div>
+          <div style="margin-top: auto; padding-top: 14px; border-top: 1px solid var(--hair); font-size: 13.5px; font-weight: 700; color: var(--navy);">
+            East &amp; Southern Africa Operations
+          </div>
         </div>
 
       </div>

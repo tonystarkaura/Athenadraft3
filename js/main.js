@@ -21,6 +21,10 @@ document.addEventListener('DOMContentLoaded', () => {
   initHeroSlider();
   initCounters();
   initProjectsFilter();
+  initStoryExplorers();
+  initInteractiveTimelines();
+  initOfficeClocks();
+  initVoicesTabs();
 });
 
 /* ==========================================================================
@@ -607,188 +611,485 @@ function initHeaderAndNav() {
 }
 
 /* ==========================================================================
-   06. HERO STORYTELLING ENGINE & CINEMATIC VIDEO CONTROLLER
+   06. INNOVATIVE 3D ECOSYSTEM CONSTELLATION & MORPHING ENGINE
    ========================================================================== */
 function initHeroSlider() {
-  const storiesData = [
+  const ecosystemData = [
     {
-      eyebrow: "THE ATHENA ECOSYSTEM · PARENT FOUNDATION",
-      title: "Everything begins<br class=\"hero-br\"> with Athena.",
-      leadText: "Athena Infonomics is the parent foundation behind an interconnected social impact ecosystem. Mobilizing field research agronomists, frontline surveyors, and digital advisory across 60+ countries to turn ground truth into lasting human progress.",
-      caption: "Parent Foundation · 60+ Nations Worldwide",
+      badge: "Parent Foundation & Research Practice",
+      title: "Ground-Truth Evidence & Strategic Policy Reform",
+      leadText: "Athena Infonomics is the parent foundation orchestrating rigorous social science research, field data collection across 60+ countries, and systemic policy reform to solve complex development challenges.",
+      chips: [
+        "60+ Nations Worldwide",
+        "95+ Development Specialists",
+        "430+ Field Engagements"
+      ],
+      primaryBtn: { text: "Explore Athena Story", href: "about-us.html", target: "_self" },
+      secondaryBtn: null,
       videoSrc: "videos/hero-agronomy-field-research-32190.mp4",
-      poster: "images/hero-fieldwork.jpg"
+      poster: "images/hero-fieldwork.jpg",
+      coreCaption: "GROUND TRUTH INTELLIGENCE",
+      themeColor: "#D19C33"
     },
     {
-      eyebrow: "APPLIED ARTIFICIAL INTELLIGENCE · ECOSYSTEM CHILD",
-      title: "APLYD: Applied AI for<br class=\"hero-br\"> governments & institutions",
-      leadText: "The Chief AI Officer for institutions — applied intelligence, drone aerial analytics, and decision models built on data that reflects operational reality and ethical governance to empower communities.",
-      caption: "APLYD.com · Chief AI Officer for Institutions",
+      badge: "Child Company · Applied AI Partner",
+      title: "The Chief AI Officer for Public Institutions",
+      leadText: "APLYD builds high-leverage artificial intelligence systems, predictive decision-support engines, and ethical AI sandboxes tailored for public sector leaders, government agencies, and utilities.",
+      chips: [
+        "AI Sandboxing & Governance",
+        "Automated Public Delivery",
+        "Predictive Scenario Modelling"
+      ],
+      primaryBtn: { text: "Visit APLYD.com ↗", href: "https://aplyd.com", target: "_blank" },
+      secondaryBtn: null,
       videoSrc: "videos/hero-drone-survey-outdoors-44644.mp4",
-      poster: "images/work-governance.jpg"
+      poster: "images/work-governance.jpg",
+      coreCaption: "NEURAL DECISION NETWORKS",
+      themeColor: "#3854D0"
     },
     {
-      eyebrow: "SOFTWARE PLATFORM · ECOSYSTEM CHILD",
-      title: "TolaData: Web-based M&amp;E<br class=\"hero-br\"> software for global development",
-      leadText: "Specialized monitoring and evaluation software built for development teams to manage indicator tracking, digital tablet field collection, and report on real-time program outcomes across 5 continents.",
-      caption: "TolaData.com · M&E Software Platform",
+      badge: "Child Company · M&E Software Platform",
+      title: "Next-Gen Monitoring & Evaluation Software",
+      leadText: "TolaData is the purpose-built cloud monitoring and evaluation software empowering international development teams, NGOs, and donors with real-time indicator tracking, results frameworks, and automated impact reporting.",
+      chips: [
+        "Real-Time Indicator Dashboards",
+        "Multi-Project Frameworks",
+        "100+ Global Nonprofits"
+      ],
+      primaryBtn: { text: "Visit TolaData.com ↗", href: "https://www.toladata.com", target: "_blank" },
+      secondaryBtn: null,
       videoSrc: "videos/hero-woman-tablet-field-24129.mp4",
-      poster: "images/case-agri-digital.jpg"
+      poster: "images/case-agri-digital.jpg",
+      coreCaption: "REAL-TIME IMPACT TELEMETRY",
+      themeColor: "#00A389"
     }
   ];
 
-  const storyPills = document.querySelectorAll('.hero-story-pill, .slide-nav-pill');
-  const ecoCards = document.querySelectorAll('.hero-ecosystem-card');
-  const heroEyebrow = document.getElementById('hero-eyebrow-text');
-  const heroTitle = document.getElementById('hero-title-text');
+  // DOM Elements
+  const heroSection = document.querySelector('.hero-constellation-section') || document.querySelector('.hero-section');
+  const badgeText = document.getElementById('hero-badge-text');
+  const titleText = document.getElementById('hero-title-text');
   const leadText = document.getElementById('hero-lead-text');
-  const captionText = document.getElementById('hero-caption-text');
-  const bgVideo = document.getElementById('hero-bg-video');
-  const videoToggleBtn = document.getElementById('video-toggle-btn');
-  const toggleText = document.getElementById('video-toggle-text');
-  const iconPause = document.querySelector('.video-icon-pause');
-  const iconPlay = document.querySelector('.video-icon-play');
+  const chipsContainer = document.getElementById('hero-capabilities-chips');
+  const primaryBtn = document.getElementById('hero-btn-primary');
+  const secondaryBtn = document.getElementById('hero-btn-secondary');
+  const logoNodes = document.querySelectorAll('.nexus-logo-node');
+  const bgVideos = document.querySelectorAll('.hero-video-stream');
+  const canvas = document.getElementById('constellation-canvas');
 
-  let currentStory = 0;
-  let storyInterval = null;
-  let isVideoPlaying = true;
+  let currentIndex = 0;
+  let timerStartTime = performance.now();
+  const SLIDE_DURATION = 5000;
+  let isUserHovered = false;
 
-  // Update Story Narrative
-  function updateStory(index) {
-    const data = storiesData[index];
-    if (!data) return;
+  // ----------------------------------------------------
+  // HTML5 Canvas Particle Constellation Morphing Engine
+  // ----------------------------------------------------
+  let ctx = null;
+  let canvasWidth = 0;
+  let canvasHeight = 0;
+  let particles = [];
+  const TOTAL_PARTICLES = 220;
+  let mouse = { x: -1000, y: -1000, active: false };
+  let shockwave = { x: 0, y: 0, radius: 0, active: false };
 
-    storyPills.forEach((p, i) => {
-      const isSelected = i === index;
-      p.classList.toggle('active', isSelected);
-      p.setAttribute('aria-selected', isSelected ? 'true' : 'false');
-    });
+  function initCanvas() {
+    if (!canvas) return;
+    ctx = canvas.getContext('2d');
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas, { passive: true });
 
-    ecoCards.forEach((card, i) => {
-      card.classList.toggle('active', i === index);
-    });
-
-    if (heroEyebrow) {
-      heroEyebrow.style.opacity = '0';
-      setTimeout(() => {
-        heroEyebrow.textContent = data.eyebrow;
-        heroEyebrow.style.opacity = '1';
-      }, 120);
+    // Build Particles Pool - Exclusively Brand Gold Palette
+    particles = [];
+    const goldPalette = ['#D19C33', '#E5B34B', '#F5E9D1', '#F7B731', '#C48F29'];
+    for (let i = 0; i < TOTAL_PARTICLES; i++) {
+      const color = goldPalette[i % goldPalette.length];
+      particles.push({
+        x: Math.random() * (canvasWidth || 500),
+        y: Math.random() * (canvasHeight || 500),
+        curX: Math.random() * (canvasWidth || 500),
+        curY: Math.random() * (canvasHeight || 500),
+        targetX: canvasWidth / 2,
+        targetY: canvasHeight / 2,
+        vx: (Math.random() - 0.5) * 0.4,
+        vy: (Math.random() - 0.5) * 0.4,
+        size: 1.8 + Math.random() * 2.4,
+        color: color,
+        phase: Math.random() * Math.PI * 2,
+        speed: 0.6 + Math.random() * 0.8,
+        pulseSpeed: 0.03 + Math.random() * 0.04
+      });
     }
 
-    if (heroTitle) {
-      heroTitle.style.opacity = '0';
+    setMorphTargets(currentIndex);
+
+    // Mouse Tracking on Arena
+    const arena = document.getElementById('hero-constellation-arena');
+    if (arena) {
+      arena.addEventListener('mousemove', (e) => {
+        const r = canvas.getBoundingClientRect();
+        mouse.x = e.clientX - r.left;
+        mouse.y = e.clientY - r.top;
+        mouse.active = true;
+      }, { passive: true });
+
+      arena.addEventListener('mouseleave', () => {
+        mouse.active = false;
+        mouse.x = -1000;
+        mouse.y = -1000;
+      });
+
+      arena.addEventListener('click', (e) => {
+        const r = canvas.getBoundingClientRect();
+        shockwave.x = e.clientX - r.left;
+        shockwave.y = e.clientY - r.top;
+        shockwave.radius = 0;
+        shockwave.active = true;
+      });
+    }
+  }
+
+  function resizeCanvas() {
+    if (!canvas) return;
+    const rect = canvas.getBoundingClientRect();
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    canvasWidth = rect.width || canvas.parentElement.clientWidth || 500;
+    canvasHeight = rect.height || canvas.parentElement.clientHeight || 500;
+    canvas.width = canvasWidth * dpr;
+    canvas.height = canvasHeight * dpr;
+    if (ctx) ctx.scale(dpr, dpr);
+    if (particles.length) setMorphTargets(currentIndex);
+  }
+
+  // Generate Geometric Coordinate Target Maps
+  function setMorphTargets(entityIdx) {
+    if (!canvasWidth || !canvasHeight) return;
+    const cx = canvasWidth / 2;
+    const cy = canvasHeight / 2;
+    const w = canvasWidth;
+    const h = canvasHeight;
+
+    // Triangle Apex Node Positions
+    const pAthena = { x: cx, y: h * 0.22 };
+    const pPlyd = { x: w * 0.24, y: h * 0.76 };
+    const pTola = { x: w * 0.76, y: h * 0.76 };
+
+    particles.forEach((p, i) => {
+      let tx = cx, ty = cy;
+
+      if (entityIdx === 0) {
+        // --- MODE 0: ATHENA INFONOMICS (THE "A" APEX EMBLEM + CONCENTRIC SONAR RAYS) ---
+        if (i < 90) {
+          // Iconic Chevron Triangle
+          if (i < 45) {
+            // Left Arm
+            const k = i / 45;
+            tx = pAthena.x + (pPlyd.x - pAthena.x) * k;
+            ty = pAthena.y + (pPlyd.y - pAthena.y) * k;
+          } else {
+            // Right Arm
+            const k = (i - 45) / 45;
+            tx = pAthena.x + (pTola.x - pAthena.x) * k;
+            ty = pAthena.y + (pTola.y - pAthena.y) * k;
+          }
+        } else if (i < 130) {
+          // Horizontal Crossbar
+          const k = (i - 90) / 40;
+          tx = (w * 0.35) + k * (w * 0.3);
+          ty = cy + 20;
+        } else if (i < 170) {
+          // Golden Pivot Core Sphere
+          const angle = ((i - 130) / 40) * Math.PI * 2;
+          const rad = 28 + (i % 3) * 12;
+          tx = cx + Math.cos(angle) * rad;
+          ty = cy + Math.sin(angle) * rad;
+        } else {
+          // Orbiting Ambient Field
+          const angle = ((i - 170) / 50) * Math.PI * 2;
+          const rad = 130 + (i % 5) * 22;
+          tx = cx + Math.cos(angle) * rad;
+          ty = cy + Math.sin(angle) * rad;
+        }
+
+      } else if (entityIdx === 1) {
+        // --- MODE 1: APLYD (APPLIED AI NEURAL NETWORK MATRIX) ---
+        const layers = 5;
+        const layerIdx = i % layers;
+        const nodesInLayer = Math.floor(TOTAL_PARTICLES / layers);
+        const nodeIdx = Math.floor(i / layers);
+
+        const lx = w * 0.18 + (layerIdx / (layers - 1)) * (w * 0.64);
+        const ly = h * 0.2 + (nodeIdx / nodesInLayer) * (h * 0.6);
+        tx = lx + (Math.sin(i * 0.3) * 14);
+        ty = ly + (Math.cos(i * 0.3) * 14);
+
+      } else {
+        // --- MODE 2: TOLADATA (REAL-TIME M&E INDICATOR TELEMETRY RADAR) ---
+        if (i < 110) {
+          // Outer Rotating Radar Dial
+          const angle = (i / 110) * Math.PI * 2;
+          const rad = Math.min(w, h) * 0.34;
+          tx = cx + Math.cos(angle) * rad;
+          ty = cy + Math.sin(angle) * rad;
+        } else if (i < 170) {
+          // Inner Metric Ring
+          const angle = ((i - 110) / 60) * Math.PI * 2;
+          const rad = Math.min(w, h) * 0.20;
+          tx = cx + Math.cos(angle) * rad;
+          ty = cy + Math.sin(angle) * rad;
+        } else {
+          // Telemetry Crossbars & Signal Beacons
+          const k = (i - 170) / 50;
+          const side = i % 2 === 0 ? 1 : -1;
+          tx = cx + side * (k * (w * 0.36));
+          ty = cy + (Math.sin(k * 10) * 25);
+        }
+      }
+
+      p.targetX = tx;
+      p.targetY = ty;
+    });
+  }
+
+  function renderCanvas() {
+    if (!ctx || !canvasWidth || !canvasHeight) {
+      requestAnimationFrame(renderCanvas);
+      return;
+    }
+
+    ctx.clearRect(0, 0, canvasWidth, canvasHeight);
+
+    // 1. Draw Connecting Orbital Triangle Splines
+    const cx = canvasWidth / 2;
+    const h = canvasHeight;
+    const w = canvasWidth;
+    const pAthena = { x: cx, y: h * 0.22 };
+    const pPlyd = { x: w * 0.24, y: h * 0.76 };
+    const pTola = { x: w * 0.76, y: h * 0.76 };
+
+    ctx.beginPath();
+    ctx.strokeStyle = 'rgba(209, 156, 51, 0.18)';
+    ctx.lineWidth = 1.5;
+    ctx.setLineDash([4, 6]);
+    ctx.moveTo(pAthena.x, pAthena.y);
+    ctx.lineTo(pPlyd.x, pPlyd.y);
+    ctx.lineTo(pTola.x, pTola.y);
+    ctx.closePath();
+    ctx.stroke();
+    ctx.setLineDash([]);
+
+    // 2. Draw Shockwave Ripple
+    if (shockwave.active) {
+      shockwave.radius += 8;
+      ctx.beginPath();
+      ctx.arc(shockwave.x, shockwave.y, shockwave.radius, 0, Math.PI * 2);
+      ctx.strokeStyle = `rgba(209, 156, 51, ${Math.max(0, 1 - shockwave.radius / 260)})`;
+      ctx.lineWidth = 2;
+      ctx.stroke();
+      if (shockwave.radius > 260) shockwave.active = false;
+    }
+
+    // 3. Update & Render Particles (All Brand Gold)
+    for (let i = 0; i < particles.length; i++) {
+      const p = particles[i];
+
+      // Spring Physics toward Target
+      p.phase += p.pulseSpeed;
+      const wobbleX = Math.sin(p.phase) * 3;
+      const wobbleY = Math.cos(p.phase) * 3;
+
+      const spring = 0.065 * p.speed;
+      p.curX += ((p.targetX + wobbleX) - p.curX) * spring;
+      p.curY += ((p.targetY + wobbleY) - p.curY) * spring;
+
+      // Mouse Interaction (Deflection & Proximity Laser)
+      if (mouse.active) {
+        const dx = p.curX - mouse.x;
+        const dy = p.curY - mouse.y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist < 110) {
+          const force = (110 - dist) / 110;
+          p.curX += (dx / dist) * force * 12;
+          p.curY += (dy / dist) * force * 12;
+
+          if (i % 6 === 0) {
+            ctx.beginPath();
+            ctx.moveTo(mouse.x, mouse.y);
+            ctx.lineTo(p.curX, p.curY);
+            ctx.strokeStyle = `rgba(209, 156, 51, ${0.45 * force})`;
+            ctx.lineWidth = 1;
+            ctx.stroke();
+          }
+        }
+      }
+
+      // Draw Inter-Particle Constellation Network Lines (All Brand Gold)
+      for (let j = i + 1; j < particles.length; j++) {
+        if (j > i + 14) break; // Optimization limit
+        const p2 = particles[j];
+        const dx = p.curX - p2.curX;
+        const dy = p.curY - p2.curY;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+
+        if (dist < 46) {
+          const lineAlpha = (1 - dist / 46) * 0.28;
+          ctx.beginPath();
+          ctx.moveTo(p.curX, p.curY);
+          ctx.lineTo(p2.curX, p2.curY);
+          ctx.strokeStyle = `rgba(209, 156, 51, ${lineAlpha})`;
+          ctx.lineWidth = 0.8;
+          ctx.stroke();
+        }
+      }
+
+      // Draw Particle Dot with Warm Gold Glow
+      ctx.beginPath();
+      ctx.arc(p.curX, p.curY, p.size, 0, Math.PI * 2);
+      ctx.fillStyle = p.color;
+      ctx.shadowColor = '#D19C33';
+      ctx.shadowBlur = 8;
+      ctx.fill();
+      ctx.shadowBlur = 0; // Reset
+    }
+
+    requestAnimationFrame(renderCanvas);
+  }
+
+  // ----------------------------------------------------
+  // Synchronized Entity & Narrative Update
+  // ----------------------------------------------------
+  function updateEcosystemFocus(index, smoothTransition = true) {
+    const data = ecosystemData[index];
+    if (!data) return;
+
+    currentIndex = index;
+    timerStartTime = performance.now();
+
+    // 1. Morph Particle Constellation Target Positions
+    setMorphTargets(index);
+
+    // 2. Update 3 Floating Holographic Logo Nodes
+    logoNodes.forEach((node, i) => {
+      const isActive = i === index;
+      node.classList.toggle('active', isActive);
+      node.setAttribute('aria-selected', isActive ? 'true' : 'false');
+    });
+
+    // 3. Update Story Glass Card Narrative
+    if (smoothTransition) {
+      if (badgeText) badgeText.style.opacity = '0';
+      if (titleText) titleText.style.opacity = '0';
+      if (leadText) leadText.style.opacity = '0';
+      if (chipsContainer) chipsContainer.style.opacity = '0';
+
       setTimeout(() => {
-        heroTitle.innerHTML = data.title;
-        heroTitle.style.opacity = '1';
+        if (badgeText) {
+          badgeText.textContent = data.badge;
+          badgeText.style.opacity = '1';
+        }
+        if (titleText) {
+          titleText.innerHTML = data.title;
+          titleText.style.opacity = '1';
+        }
+        if (leadText) {
+          leadText.textContent = data.leadText;
+          leadText.style.opacity = '1';
+        }
+        if (chipsContainer) {
+          chipsContainer.innerHTML = data.chips.map(chip => 
+            `<span class="nexus-chip"><span class="chip-dot"></span> ${chip}</span>`
+          ).join('');
+          chipsContainer.style.opacity = '1';
+        }
+
+        // Action Buttons
+        if (primaryBtn) {
+          primaryBtn.textContent = data.primaryBtn.text;
+          primaryBtn.href = data.primaryBtn.href;
+          primaryBtn.target = data.primaryBtn.target;
+        }
+        if (secondaryBtn) {
+          if (data.secondaryBtn) {
+            secondaryBtn.style.display = 'inline-flex';
+            secondaryBtn.textContent = data.secondaryBtn.text;
+            secondaryBtn.href = data.secondaryBtn.href;
+            secondaryBtn.target = data.secondaryBtn.target;
+          } else {
+            secondaryBtn.style.display = 'none';
+          }
+        }
       }, 140);
     }
 
-    if (leadText) {
-      leadText.style.opacity = '0';
-      setTimeout(() => {
-        leadText.textContent = data.leadText;
-        leadText.style.opacity = '1';
-      }, 160);
-    }
-
-    if (captionText) {
-      captionText.textContent = data.caption;
-    }
-
-    // Seamlessly cross-fade / update video source if different
-    if (bgVideo && data.videoSrc) {
-      const currentSrc = bgVideo.currentSrc || bgVideo.src;
-      if (!currentSrc.includes(data.videoSrc)) {
-        bgVideo.style.opacity = '0.5';
-        setTimeout(() => {
-          bgVideo.src = data.videoSrc;
-          bgVideo.poster = data.poster;
-          if (isVideoPlaying) {
-            bgVideo.play().catch(() => {});
-          }
-          bgVideo.style.opacity = '1';
-        }, 220);
-      }
-    }
-
-    currentStory = index;
-  }
-
-  // Interactive Story Switchers (Pills)
-  storyPills.forEach((pill) => {
-    pill.addEventListener('click', () => {
-      const storyIdx = parseInt(pill.getAttribute('data-story') || '0', 10);
-      updateStory(storyIdx);
-      restartInterval();
-    });
-  });
-
-  // Interactive Story Switchers (Ecosystem Cards)
-  ecoCards.forEach((card) => {
-    card.addEventListener('click', (e) => {
-      if (e.target.closest('a')) return; // Allow direct link clicks
-      const storyIdx = parseInt(card.getAttribute('data-story') || '0', 10);
-      updateStory(storyIdx);
-      restartInterval();
-    });
-  });
-
-  // Background Video Play/Pause Toggle
-  if (videoToggleBtn && bgVideo) {
-    videoToggleBtn.addEventListener('click', () => {
-      if (bgVideo.paused) {
-        bgVideo.play().then(() => {
-          isVideoPlaying = true;
-          if (toggleText) toggleText.textContent = 'Pause Story';
-          if (iconPause) iconPause.style.display = 'block';
-          if (iconPlay) iconPlay.style.display = 'none';
-          videoToggleBtn.setAttribute('aria-label', 'Pause background video');
-        }).catch(() => {});
-      } else {
-        bgVideo.pause();
-        isVideoPlaying = false;
-        if (toggleText) toggleText.textContent = 'Play Story';
-        if (iconPause) iconPause.style.display = 'none';
-        if (iconPlay) iconPlay.style.display = 'block';
-        videoToggleBtn.setAttribute('aria-label', 'Play background video');
+    // 5. Update Background Video with Seamless Hardware-Accelerated Cross-fade
+    bgVideos.forEach((vid, i) => {
+      const isActive = i === index;
+      vid.classList.toggle('active', isActive);
+      if (isActive && vid.paused) {
+        vid.play().catch(() => {});
       }
     });
   }
 
-  // IntersectionObserver: Pause video when hero is scrolled out of view to save GPU/CPU
-  const heroSection = document.querySelector('.hero-section');
-  if (heroSection && bgVideo && 'IntersectionObserver' in window) {
-    const videoObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          if (isVideoPlaying && bgVideo.paused) {
-            bgVideo.play().catch(() => {});
-          }
-        } else {
-          if (!bgVideo.paused) {
-            bgVideo.pause();
-          }
-        }
-      });
-    }, { threshold: 0.15 });
-
-    videoObserver.observe(heroSection);
+  // ----------------------------------------------------
+  // 5-Second Master Ticker Loop
+  // ----------------------------------------------------
+  function tickerLoop(now) {
+    if (!isUserHovered) {
+      const elapsed = now - timerStartTime;
+      if (elapsed >= SLIDE_DURATION) {
+        const nextIndex = (currentIndex + 1) % ecosystemData.length;
+        updateEcosystemFocus(nextIndex);
+      }
+    }
+    requestAnimationFrame(tickerLoop);
   }
 
-  function startInterval() {
-    storyInterval = setInterval(() => {
-      const next = (currentStory + 1) % storiesData.length;
-      updateStory(next);
-    }, 9500);
+  // Interactivity: Click Logo Nodes
+  logoNodes.forEach(node => {
+    node.addEventListener('click', () => {
+      const idx = parseInt(node.getAttribute('data-index') || '0', 10);
+      updateEcosystemFocus(idx);
+    });
+
+    node.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        const idx = parseInt(node.getAttribute('data-index') || '0', 10);
+        updateEcosystemFocus(idx);
+      }
+    });
+  });
+
+  // Hover pauses rotation so reader can explore dots
+  if (heroSection) {
+    heroSection.addEventListener('mouseenter', () => {
+      isUserHovered = true;
+    });
+
+    heroSection.addEventListener('mouseleave', () => {
+      isUserHovered = false;
+      timerStartTime = performance.now();
+    });
   }
 
-  function restartInterval() {
-    clearInterval(storyInterval);
-    startInterval();
-  }
+  // Keyboard navigation support
+  window.addEventListener('keydown', (e) => {
+    if (document.activeElement && (document.activeElement.tagName === 'INPUT' || document.activeElement.tagName === 'TEXTAREA')) return;
+    if (e.key === 'ArrowRight') {
+      const nextIndex = (currentIndex + 1) % ecosystemData.length;
+      updateEcosystemFocus(nextIndex);
+    } else if (e.key === 'ArrowLeft') {
+      const prevIndex = (currentIndex - 1 + ecosystemData.length) % ecosystemData.length;
+      updateEcosystemFocus(prevIndex);
+    }
+  });
 
-  startInterval();
+  // Initialize
+  initCanvas();
+  renderCanvas();
+  updateEcosystemFocus(0, false);
+  requestAnimationFrame(tickerLoop);
 }
 
 /* ==========================================================================
@@ -950,4 +1251,133 @@ function initProjectsFilter() {
     });
   }
 }
+
+/* ==========================================================================
+   09. STORY & METHODOLOGY EXPLORER CONTROLLER (TABS / STEPPERS)
+   ========================================================================== */
+function initStoryExplorers() {
+  const explorers = document.querySelectorAll('.story-explorer');
+  explorers.forEach(explorer => {
+    const stepBtns = explorer.querySelectorAll('.explorer-step-btn');
+    const panes = explorer.querySelectorAll('.explorer-pane');
+
+    stepBtns.forEach((btn, idx) => {
+      btn.addEventListener('click', () => {
+        stepBtns.forEach(b => b.classList.remove('active'));
+        panes.forEach(p => p.classList.remove('active'));
+
+        btn.classList.add('active');
+        const targetId = btn.getAttribute('data-target-pane');
+        const targetPane = targetId ? explorer.querySelector(`#${targetId}`) : panes[idx];
+        if (targetPane) {
+          targetPane.classList.add('active');
+        }
+      });
+    });
+  });
+}
+
+/* ==========================================================================
+   10. INTERACTIVE TIMELINE CONTROLLER (15-YEAR MILESTONES)
+   ========================================================================== */
+function initInteractiveTimelines() {
+  const timelineWraps = document.querySelectorAll('.interactive-timeline-wrap');
+  timelineWraps.forEach(wrap => {
+    const stepPoints = wrap.querySelectorAll('.timeline-step-point');
+    const detailCards = wrap.querySelectorAll('.milestone-detail-card');
+
+    stepPoints.forEach((point, idx) => {
+      point.addEventListener('click', () => {
+        stepPoints.forEach(p => p.classList.remove('active'));
+        detailCards.forEach(c => c.style.display = 'none');
+
+        point.classList.add('active');
+        const targetId = point.getAttribute('data-milestone-target');
+        const targetCard = targetId ? wrap.querySelector(`#${targetId}`) : detailCards[idx];
+        if (targetCard) {
+          targetCard.style.display = 'grid';
+          targetCard.style.opacity = '0';
+          targetCard.style.transform = 'translateY(12px)';
+          requestAnimationFrame(() => {
+            targetCard.style.opacity = '1';
+            targetCard.style.transform = 'translateY(0)';
+          });
+        }
+      });
+    });
+  });
+}
+
+/* ==========================================================================
+   11. LIVE GLOBAL OFFICE TIMEZONE CLOCKS
+   ========================================================================== */
+function initOfficeClocks() {
+  const clockBadges = document.querySelectorAll('.office-clock-time[data-tz]');
+  if (!clockBadges.length) return;
+
+  function updateClocks() {
+    const now = new Date();
+    clockBadges.forEach(badge => {
+      const tz = badge.getAttribute('data-tz');
+      try {
+        const timeStr = new Intl.DateTimeFormat('en-US', {
+          timeZone: tz,
+          hour: '2-digit',
+          minute: '2-digit',
+          hour12: true
+        }).format(now);
+        
+        badge.textContent = timeStr;
+
+        // Check if business hours (9am - 6pm local)
+        const hour = parseInt(new Intl.DateTimeFormat('en-US', {
+          timeZone: tz,
+          hour: 'numeric',
+          hour12: false
+        }).format(now), 10);
+
+        const card = badge.closest('.office-hub-card');
+        const statusDot = card?.querySelector('.office-status-dot');
+        const statusText = card?.querySelector('.office-status-text');
+
+        if (statusDot) {
+          const isOpen = hour >= 9 && hour < 18;
+          statusDot.classList.toggle('closed', !isOpen);
+          if (statusText) statusText.textContent = isOpen ? 'Open Now' : 'After Hours';
+        }
+      } catch (e) {
+        // Fallback gracefully
+      }
+    });
+  }
+
+  updateClocks();
+  setInterval(updateClocks, 30000);
+}
+
+/* ==========================================================================
+   12. VOICES & PERSPECTIVES TAB FILTER
+   ========================================================================== */
+function initVoicesTabs() {
+  const voiceContainers = document.querySelectorAll('.voices-filter-container');
+  voiceContainers.forEach(container => {
+    const tabBtns = container.querySelectorAll('.voice-tab-btn');
+    const sections = container.querySelectorAll('.voice-section');
+
+    tabBtns.forEach((btn, idx) => {
+      btn.addEventListener('click', () => {
+        tabBtns.forEach(b => b.classList.remove('active'));
+        sections.forEach(s => s.style.display = 'none');
+
+        btn.classList.add('active');
+        const targetId = btn.getAttribute('data-target-voice');
+        const targetSection = targetId ? container.querySelector(`#${targetId}`) : sections[idx];
+        if (targetSection) {
+          targetSection.style.display = 'grid';
+        }
+      });
+    });
+  });
+}
+
 

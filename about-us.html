@@ -210,52 +210,146 @@
   <section class="page-hero">
     <div class="wrap">
       <div class="page-hero-inner" data-reveal>
-        <div class="breadcrumbs">
-          <a href="index.html">Home</a>
-          <span class="breadcrumbs-sep">/</span>
-          <span>About Us</span>
-        </div>
-        <div class="page-hero-badge">
-          <span class="pill-glow-dot"></span>
-          <span>Our Story &amp; Purpose</span>
-        </div>
-        <h1 class="disp page-hero-title">About Athena Infonomics</h1>
+        <h1 class="disp page-hero-title">Our Story</h1>
         <p class="body page-hero-lead">
           Athena Infonomics is driving innovation in policy and practice through sound research, creative data models, and fit-for-purpose digital strategies across global development.
         </p>
+        
+        <!-- Section Switcher: Our Story vs. Athena Turns 15 -->
+        <div style="display: flex; gap: 12px; margin-top: 32px; flex-wrap: wrap;">
+          <a href="about-us.html" class="btn btn-gold btn-sm">Our Story</a>
+          <a href="athena-turns-15.html" class="btn btn-secondary btn-sm" style="border-color: rgba(255,255,255,0.3); color: #FAFAF7;">Athena Turns 15 <span>→</span></a>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Why Athena & Strategic Pillars -->
-  <section class="section wrap" style="padding-top: 90px; padding-bottom: 70px;">
-    <div style="max-width: 900px;" data-reveal>
-      <div class="cap" style="color: var(--gold-deep); margin-bottom: 12px;">Strategic Value</div>
-      <h2 class="hd" style="font-size: clamp(28px, 3.4vw, 42px); margin-bottom: 20px;">Why Athena</h2>
-      <p class="body" style="font-size: 20px; font-weight: 700; color: var(--navy); margin-bottom: 28px;">
+  <!-- Story Arc 1: Why Athena & Interactive Strategic Value Explorer -->
+  <section class="section wrap" style="padding-top: 80px; padding-bottom: 70px;">
+    <div style="max-width: 860px; margin-bottom: 40px;" data-reveal>
+      <div class="cap" style="color: var(--gold-deep); margin-bottom: 12px;">Strategic Value Proposition</div>
+      <h2 class="hd" style="font-size: clamp(28px, 3.4vw, 42px); margin-bottom: 18px;">Why Athena</h2>
+      <p class="body" style="font-size: 21px; font-weight: 700; color: var(--navy); line-height: 1.5; margin-bottom: 12px;">
         We are a Strategic Data, Insights, and Innovation Partner in Social Impact.
       </p>
-      
-      <div style="display: flex; flex-direction: column; gap: 18px;">
-        <div style="display: flex; gap: 16px; align-items: flex-start;">
-          <span class="hero-eco-dot gold-pulse" style="margin-top: 8px;"></span>
-          <p class="body" style="margin: 0;"><strong>15+ Years’ Driving Impact</strong> via research, data, and digital technology across public systems and communities.</p>
+      <p class="body" style="font-size: 17.5px; color: #4A538A;">
+        Explore the foundational pillars that set our methodology, global reach, and community partnerships apart.
+      </p>
+    </div>
+
+    <!-- Interactive 5-Pillar Story Explorer -->
+    <div class="story-explorer" data-reveal>
+      <div class="explorer-nav">
+        <button class="explorer-step-btn active" data-target-pane="pillar-1">
+          <div class="explorer-step-info">
+            <span class="explorer-step-title">15+ Years’ Driving Impact</span>
+            <span class="explorer-step-sub">Research, data &amp; digital tech</span>
+          </div>
+        </button>
+
+        <button class="explorer-step-btn" data-target-pane="pillar-2">
+          <div class="explorer-step-info">
+            <span class="explorer-step-title">Global Insights, Local Implementation</span>
+            <span class="explorer-step-sub">Asia, Africa &amp; Latin America</span>
+          </div>
+        </button>
+
+        <button class="explorer-step-btn" data-target-pane="pillar-3">
+          <div class="explorer-step-info">
+            <span class="explorer-step-title">Cross-Sectoral Expertise</span>
+            <span class="explorer-step-sub">Finance, MERL, Governance &amp; Tech</span>
+          </div>
+        </button>
+
+        <button class="explorer-step-btn" data-target-pane="pillar-4">
+          <div class="explorer-step-info">
+            <span class="explorer-step-title">Data-Driven, Impact-Focused</span>
+            <span class="explorer-step-sub">Measurable development outcomes</span>
+          </div>
+        </button>
+
+        <button class="explorer-step-btn" data-target-pane="pillar-5">
+          <div class="explorer-step-info">
+            <span class="explorer-step-title">Community Connect Network</span>
+            <span class="explorer-step-sub">2,800+ certified professionals</span>
+          </div>
+        </button>
+      </div>
+
+      <div class="explorer-panes">
+        <!-- Pane 1 -->
+        <div id="pillar-1" class="explorer-pane active">
+          <div class="explorer-pane-header">
+            <h3 class="explorer-pane-title">15+ Years of Sustained Impact</h3>
+          </div>
+          <p class="explorer-pane-desc">
+            For over a decade and a half, Athena Infonomics has pioneered evidence generation across public systems, utilities, and marginalized communities. Our work bridges academic social science rigor with actionable economic implementation to change decisions, not just produce reports.
+          </p>
+          <div class="explorer-feature-chips">
+            <span class="explorer-feature-chip">Public Systems Reform</span>
+            <span class="explorer-feature-chip">Evidence Generation</span>
+            <span class="explorer-feature-chip">Lasting Policy Change</span>
+          </div>
         </div>
-        <div style="display: flex; gap: 16px; align-items: flex-start;">
-          <span class="hero-eco-dot gold-pulse" style="margin-top: 8px;"></span>
-          <p class="body" style="margin: 0;"><strong>Global Insights, Local Implementation</strong> with deep field experience in diverse markets across Asia, Africa, and Latin America.</p>
+
+        <!-- Pane 2 -->
+        <div id="pillar-2" class="explorer-pane">
+          <div class="explorer-pane-header">
+            <h3 class="explorer-pane-title">Global Insights, Local Implementation</h3>
+          </div>
+          <p class="explorer-pane-desc">
+            With deep field experience across diverse markets in Asia, Africa, and Latin America, our multidisciplinary teams combine world-class international standards with nuanced local context, dialects, and cultural understanding.
+          </p>
+          <div class="explorer-feature-chips">
+            <span class="explorer-feature-chip">60+ Countries Reached</span>
+            <span class="explorer-feature-chip">5 Global Operating Hubs</span>
+            <span class="explorer-feature-chip">Vernacular Field Fluency</span>
+          </div>
         </div>
-        <div style="display: flex; gap: 16px; align-items: flex-start;">
-          <span class="hero-eco-dot gold-pulse" style="margin-top: 8px;"></span>
-          <p class="body" style="margin: 0;"><strong>Cross-Sectoral Expertise</strong> in Finance, MERL, Governance, Technology, Analytics, and Data Science Integration.</p>
+
+        <!-- Pane 3 -->
+        <div id="pillar-3" class="explorer-pane">
+          <div class="explorer-pane-header">
+            <h3 class="explorer-pane-title">Cross-Sectoral Domain Depth</h3>
+          </div>
+          <p class="explorer-pane-desc">
+            Our teams integrate expertise across Development Finance, Monitoring Evaluation Research and Learning (MERL), Public Governance, Digital Infrastructure, Advanced Analytics, and Data Science to solve complex multisectoral challenges.
+          </p>
+          <div class="explorer-feature-chips">
+            <span class="explorer-feature-chip">Development Finance</span>
+            <span class="explorer-feature-chip">MERLA Frameworks</span>
+            <span class="explorer-feature-chip">AI &amp; Data Science</span>
+          </div>
         </div>
-        <div style="display: flex; gap: 16px; align-items: flex-start;">
-          <span class="hero-eco-dot gold-pulse" style="margin-top: 8px;"></span>
-          <p class="body" style="margin: 0;"><strong>Data-Driven, Impact-Focused</strong> and evidence-based solutions for measurable development outcomes.</p>
+
+        <!-- Pane 4 -->
+        <div id="pillar-4" class="explorer-pane">
+          <div class="explorer-pane-header">
+            <h3 class="explorer-pane-title">Data-Driven, Impact-Focused</h3>
+          </div>
+          <p class="explorer-pane-desc">
+            We provide evidence-based solutions designed specifically for measurable, scalable development outcomes. Every diagnostic and algorithm is calibrated to support donor accountability and national government policy execution.
+          </p>
+          <div class="explorer-feature-chips">
+            <span class="explorer-feature-chip">Funder Scrutiny Ready</span>
+            <span class="explorer-feature-chip">Scalable Policy Pathways</span>
+            <span class="explorer-feature-chip">Real-Time Dashboards</span>
+          </div>
         </div>
-        <div style="display: flex; gap: 16px; align-items: flex-start;">
-          <span class="hero-eco-dot gold-pulse" style="margin-top: 8px;"></span>
-          <p class="body" style="margin: 0;"><strong>Community Connect</strong> through a network of 2,800+ ethically certified, tech-savvy, and culturally responsive data professionals across India, backed by global partners.</p>
+
+        <!-- Pane 5 -->
+        <div id="pillar-5" class="explorer-pane">
+          <div class="explorer-pane-header">
+            <h3 class="explorer-pane-title">Community Connect</h3>
+          </div>
+          <p class="explorer-pane-desc">
+            Through a certified network of 2,800+ ethically certified, tech-savvy, and culturally responsive data professionals across India and verified global partners, we access hard-to-reach geographies with rapid 48-hour mobilization.
+          </p>
+          <div class="explorer-feature-chips">
+            <span class="explorer-feature-chip">2,800+ Certified Enumerators</span>
+            <span class="explorer-feature-chip">22 Languages &amp; Dialects</span>
+            <span class="explorer-feature-chip">FPIC Ethical Protocols</span>
+          </div>
         </div>
       </div>
     </div>
@@ -282,127 +376,182 @@
     </div>
   </section>
 
-  <!-- Interactive 15-Year Milestone Timeline (Replaces Image Timeline SVG) -->
-  <section class="timeline-section" style="border-top: 1px solid var(--hair); border-bottom: 1px solid var(--hair);">
+  <!-- Story Arc 2: Interactive 15-Year Milestone Journey -->
+  <section class="section" style="background: var(--offwhite); padding: 90px 0; border-top: 1px solid var(--hair); border-bottom: 1px solid var(--hair);">
     <div class="wrap">
-      <div style="text-align: center; max-width: 760px; margin: 0 auto;" data-reveal>
+      <div style="text-align: center; max-width: 780px; margin: 0 auto 30px;" data-reveal>
         <div class="cap" style="color: var(--gold-deep); margin-bottom: 12px;">Milestone Trajectory</div>
         <h2 class="hd" style="font-size: clamp(30px, 3.5vw, 44px);">Our 15-Year Journey</h2>
-        <p class="body" style="margin-top: 14px;">
-          Athena Infonomics was founded in Chennai, India in 2010. Chennai remains our global hub, exemplifying the local lens that we apply to our work across low- and middle-income countries. Explore the key milestones that shaped our institutional evolution.
+        <p class="body" style="margin-top: 14px; font-size: 17.5px;">
+          Athena Infonomics was founded in Chennai, India in 2010. Chennai remains our global hub, exemplifying the local lens that we apply across low- and middle-income countries. Click through key milestones shaping our institutional evolution.
         </p>
       </div>
 
-      <div class="timeline-wrap">
-        <!-- Milestone 1: 2010 -->
-        <div class="timeline-item" data-reveal>
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <div class="timeline-header">
-              <span class="timeline-year">2010</span>
-              <span class="timeline-tag">Foundation</span>
+      <div class="interactive-timeline-wrap" data-reveal>
+        <!-- Horizontal Timeline Stepper -->
+        <div class="timeline-stepper">
+          <button class="timeline-step-point active" data-milestone-target="ms-2010" aria-label="Milestone 2010">
+            <span class="timeline-node-circle"></span>
+            <span class="timeline-node-year">2010</span>
+          </button>
+          <button class="timeline-step-point" data-milestone-target="ms-2014" aria-label="Milestone 2014">
+            <span class="timeline-node-circle"></span>
+            <span class="timeline-node-year">2014</span>
+          </button>
+          <button class="timeline-step-point" data-milestone-target="ms-2018" aria-label="Milestone 2018">
+            <span class="timeline-node-circle"></span>
+            <span class="timeline-node-year">2018</span>
+          </button>
+          <button class="timeline-step-point" data-milestone-target="ms-2021" aria-label="Milestone 2021-2023">
+            <span class="timeline-node-circle"></span>
+            <span class="timeline-node-year">2021–23</span>
+          </button>
+          <button class="timeline-step-point" data-milestone-target="ms-2025" aria-label="Milestone 2025-2026">
+            <span class="timeline-node-circle"></span>
+            <span class="timeline-node-year">2025–26</span>
+          </button>
+        </div>
+
+        <!-- Dynamic Milestone Content Cards -->
+        <div id="ms-2010" class="milestone-detail-card">
+          <div>
+            <div style="display: flex; gap: 10px; margin-bottom: 12px;">
+              <span class="pill" style="background: var(--gold-pale); color: var(--navy-deep); font-weight: 700;">Foundation</span>
+              <span class="pill">Chennai, India</span>
             </div>
-            <h3 class="timeline-title">Founding in Chennai, India</h3>
-            <p class="timeline-desc">
-              Athena Infonomics established in Chennai with a founding mission: generating high-quality evidence that bridges policy research with real-world economics to serve emerging markets.
+            <h3 class="hd" style="font-size: 28px; color: var(--navy); margin-bottom: 14px;">Founding in Chennai, India</h3>
+            <p class="body" style="font-size: 16.5px; line-height: 1.7; color: var(--navy); margin-bottom: 20px;">
+              Athena Infonomics established in Chennai with a founding mission: generating high-quality evidence that bridges policy research with real-world economics to serve emerging markets and public institutions.
             </p>
+            <div style="display: flex; gap: 12px; font-size: 14px; color: #4A538A; font-weight: 600;">
+              <span>• Seed Social Science Research</span>
+              <span>• Local Lens Focus</span>
+            </div>
+          </div>
+          <div style="border-radius: 14px; overflow: hidden; height: 240px; box-shadow: 0 8px 24px rgba(0,0,0,0.08);">
+            <img src="images/hero-fieldwork.jpg" alt="2010 Founding" style="width: 100%; height: 100%; object-fit: cover;" />
           </div>
         </div>
 
-        <!-- Milestone 2: 2014 -->
-        <div class="timeline-item" data-reveal>
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <div class="timeline-header">
-              <span class="timeline-year">2014</span>
-              <span class="timeline-tag">Expansion</span>
+        <div id="ms-2014" class="milestone-detail-card" style="display: none;">
+          <div>
+            <div style="display: flex; gap: 10px; margin-bottom: 12px;">
+              <span class="pill" style="background: var(--gold-pale); color: var(--navy-deep); font-weight: 700;">Expansion</span>
+              <span class="pill">South Asia &amp; Africa</span>
             </div>
-            <h3 class="timeline-title">Cross-Sectoral Development Advisory</h3>
-            <p class="timeline-desc">
-              Expanded research and advisory practice into water, sanitation, hygiene (WASH), agriculture, and urban infrastructure across South Asia and Sub-Saharan Africa.
+            <h3 class="hd" style="font-size: 28px; color: var(--navy); margin-bottom: 14px;">Cross-Sectoral Development Advisory</h3>
+            <p class="body" style="font-size: 16.5px; line-height: 1.7; color: var(--navy); margin-bottom: 20px;">
+              Expanded research and advisory practice into water, sanitation, hygiene (WASH), agriculture, and urban infrastructure across South Asia and Sub-Saharan Africa, supporting major multilateral programs.
             </p>
+            <div style="display: flex; gap: 12px; font-size: 14px; color: #4A538A; font-weight: 600;">
+              <span>• WASH Infrastructure</span>
+              <span>• Agronomy Diagnostics</span>
+            </div>
+          </div>
+          <div style="border-radius: 14px; overflow: hidden; height: 240px; box-shadow: 0 8px 24px rgba(0,0,0,0.08);">
+            <img src="images/case-wash-liberia.jpg" alt="2014 Advisory Expansion" style="width: 100%; height: 100%; object-fit: cover;" />
           </div>
         </div>
 
-        <!-- Milestone 3: 2018 -->
-        <div class="timeline-item" data-reveal>
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <div class="timeline-header">
-              <span class="timeline-year">2018</span>
-              <span class="timeline-tag">Digital Platforms</span>
+        <div id="ms-2018" class="milestone-detail-card" style="display: none;">
+          <div>
+            <div style="display: flex; gap: 10px; margin-bottom: 12px;">
+              <span class="pill" style="background: var(--gold-pale); color: var(--navy-deep); font-weight: 700;">Digital Platforms</span>
+              <span class="pill">Gates Foundation Collaboration</span>
             </div>
-            <h3 class="timeline-title">Digital Public Goods &amp; CWIS Platform</h3>
-            <p class="timeline-desc">
-              Partnered with the Bill &amp; Melinda Gates Foundation to design the Citywide Inclusive Sanitation Monitoring, Learning &amp; Evidence (CWIS-MLE) platform and geospatial toolboxes.
+            <h3 class="hd" style="font-size: 28px; color: var(--navy); margin-bottom: 14px;">Digital Public Goods &amp; CWIS Platform</h3>
+            <p class="body" style="font-size: 16.5px; line-height: 1.7; color: var(--navy); margin-bottom: 20px;">
+              Partnered with the Bill &amp; Melinda Gates Foundation to design the Citywide Inclusive Sanitation Monitoring, Learning &amp; Evidence (CWIS-MLE) platform and geospatial analytical toolboxes across 8 global metros.
             </p>
+            <div style="display: flex; gap: 12px; font-size: 14px; color: #4A538A; font-weight: 600;">
+              <span>• CWIS-MLE Framework</span>
+              <span>• FSM Geospatial Toolbox</span>
+            </div>
+          </div>
+          <div style="border-radius: 14px; overflow: hidden; height: 240px; box-shadow: 0 8px 24px rgba(0,0,0,0.08);">
+            <img src="images/story-water-resilience.jpg" alt="2018 Gates Foundation Platform" style="width: 100%; height: 100%; object-fit: cover;" />
           </div>
         </div>
 
-        <!-- Milestone 4: 2021 -->
-        <div class="timeline-item" data-reveal>
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <div class="timeline-header">
-              <span class="timeline-year">2021–2023</span>
-              <span class="timeline-tag">Recognition</span>
+        <div id="ms-2021" class="milestone-detail-card" style="display: none;">
+          <div>
+            <div style="display: flex; gap: 10px; margin-bottom: 12px;">
+              <span class="pill" style="background: var(--gold-pale); color: var(--navy-deep); font-weight: 700;">Global Recognition</span>
+              <span class="pill">Financial Times Honoree</span>
             </div>
-            <h3 class="timeline-title">High-Growth Recognition &amp; TolaData Partnership</h3>
-            <p class="timeline-desc">
-              Named Economic Times Growth Champion and Financial Times High-Growth Company Asia-Pacific. Welcomed TolaData to provide web-based M&amp;E software to international development actors.
+            <h3 class="hd" style="font-size: 28px; color: var(--navy); margin-bottom: 14px;">High-Growth Recognition &amp; TolaData</h3>
+            <p class="body" style="font-size: 16.5px; line-height: 1.7; color: var(--navy); margin-bottom: 20px;">
+              Named Economic Times Growth Champion and Financial Times High-Growth Company Asia-Pacific. Welcomed TolaData to provide web-based M&amp;E software to international development actors worldwide.
             </p>
+            <div style="display: flex; gap: 12px; font-size: 14px; color: #4A538A; font-weight: 600;">
+              <span>• TolaData Integration</span>
+              <span>• FT Asia-Pacific Honors</span>
+            </div>
+          </div>
+          <div style="border-radius: 14px; overflow: hidden; height: 240px; box-shadow: 0 8px 24px rgba(0,0,0,0.08);">
+            <img src="images/insight-award.jpg" alt="2021 Growth Honors" style="width: 100%; height: 100%; object-fit: cover;" />
           </div>
         </div>
 
-        <!-- Milestone 5: 2025–2026 -->
-        <div class="timeline-item" data-reveal>
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <div class="timeline-header">
-              <span class="timeline-year">2025–2026</span>
-              <span class="timeline-tag">AI &amp; Federal Scale</span>
+        <div id="ms-2025" class="milestone-detail-card" style="display: none;">
+          <div>
+            <div style="display: flex; gap: 10px; margin-bottom: 12px;">
+              <span class="pill" style="background: var(--gold-pale); color: var(--navy-deep); font-weight: 700;">Federal Scale &amp; AI</span>
+              <span class="pill">NASA SEWP-VI Prime</span>
             </div>
-            <h3 class="timeline-title">APLYD Launch &amp; NASA SEWP-VI Prime Award</h3>
-            <p class="timeline-desc">
-              Launched APLYD as Chief AI Officer for institutions, and awarded the prestigious NASA SEWP-VI prime acquisition contract to deliver IT and analytics solutions globally.
+            <h3 class="hd" style="font-size: 28px; color: var(--navy); margin-bottom: 14px;">APLYD Launch &amp; NASA SEWP-VI Award</h3>
+            <p class="body" style="font-size: 16.5px; line-height: 1.7; color: var(--navy); margin-bottom: 20px;">
+              Launched APLYD as Chief AI Officer for institutions, and awarded the prestigious NASA SEWP-VI prime acquisition contract to deliver IT and analytics solutions to federal agencies and global development partners.
             </p>
+            <div style="display: flex; gap: 12px; font-size: 14px; color: #4A538A; font-weight: 600;">
+              <span>• APLYD Institutional AI</span>
+              <span>• NASA SEWP-VI Prime</span>
+            </div>
+          </div>
+          <div style="border-radius: 14px; overflow: hidden; height: 240px; box-shadow: 0 8px 24px rgba(0,0,0,0.08);">
+            <img src="images/insight-ai.jpg" alt="2025 NASA & AI" style="width: 100%; height: 100%; object-fit: cover;" />
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- About TolaData Partnership -->
-  <section class="section wrap" style="padding-top: 90px; padding-bottom: 90px;">
-    <div style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap: 48px; align-items: center;">
-      <div data-reveal>
-        <div class="cap" style="color: var(--gold-deep); margin-bottom: 12px;">Software Ecosystem</div>
-        <h2 class="hd" style="font-size: clamp(30px, 3.5vw, 44px); margin-bottom: 20px;">About TolaData</h2>
-        <p class="body" style="font-size: 18px; line-height: 1.7; color: var(--navy);">
+  <!-- Story Arc 3: About Toladata Collaboration Showcase -->
+  <section class="section wrap" style="padding-top: 60px; padding-bottom: 90px;">
+    <div class="narrative-vignette" data-reveal>
+      <div class="narrative-media-wrap">
+        <img src="images/case-agri-digital.jpg" alt="TolaData Platform" class="narrative-media-img" />
+        <div class="narrative-media-overlay">
+          <span class="pill" style="background: rgba(26,33,80,0.9); color: #FAFAF7; border-color: var(--gold);">Global M&amp;E Platform</span>
+        </div>
+      </div>
+      <div class="narrative-content-wrap">
+        <h2 class="hd" style="font-size: clamp(26px, 2.8vw, 36px); margin-bottom: 16px; color: var(--navy);">About Toladata</h2>
+        <p class="body" style="font-size: 16px; line-height: 1.7; color: var(--navy); margin-bottom: 14px;">
           TolaData is a specialised monitoring and evaluation platform designed to support organisations in tracking, managing, and reporting programme performance in the development sector.
         </p>
-        <div style="margin-top: 28px;">
+        <p class="body" style="font-size: 15px; line-height: 1.65; color: #4A538A; margin-bottom: 14px;">
+          Built for non-profits and international development actors, the platform enables users to collect and manage data, track indicators against results frameworks, and visualise progress through real-time dashboards.
+        </p>
+        <p class="body" style="font-size: 15px; line-height: 1.65; color: #4A538A; margin-bottom: 14px;">
+          In partnership with Athena Infonomics, TolaData's technology is complemented by strategic expertise in research, data analytics, and digital advisory — enabling organisations to move beyond data collection towards actionable insight.
+        </p>
+        <p class="body" style="font-size: 15px; line-height: 1.65; color: #4A538A; margin-bottom: 24px;">
+          Together, the collaboration strengthens data systems, enhances programme accountability, and supports more informed, evidence-based decision-making.
+        </p>
+        <div>
           <a href="https://www.toladata.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
             Visit TolaData.com <span style="font-size: 16px;">↗</span>
           </a>
         </div>
       </div>
-
-      <div style="background: var(--white); border: 1px solid var(--hair); border-radius: 12px; padding: 36px; box-shadow: 0 4px 20px rgba(35,43,101,0.03);" data-reveal style="transition-delay: 0.12s;">
-        <p class="body" style="margin-bottom: 20px;">
-          Built for non-profits and international development actors, the platform enables users to collect and manage data, track indicators against results frameworks, and visualise progress through real-time dashboards.
-        </p>
-        <p class="body" style="margin: 0;">
-          In partnership with Athena Infonomics, TolaData's technology is complemented by strategic expertise in research, data analytics, and digital advisory — enabling organisations to move beyond data collection towards actionable insight. Together, the collaboration strengthens data systems, enhances programme accountability, and supports more informed, evidence-based decision-making.
-        </p>
-      </div>
     </div>
   </section>
 
-  <!-- Our Values in Action (Replaces SVG Image Cards) -->
-  <section class="section" style="background: var(--offwhite); padding: 90px 0; border-top: 1px solid var(--hair); border-bottom: 1px solid var(--hair);">
+  <!-- Story Arc 5: Our Values in Action -->
+  <section class="section" style="background: var(--paper); padding: 90px 0; border-top: 1px solid var(--hair); border-bottom: 1px solid var(--hair);">
     <div class="wrap">
-      <div style="text-align: center; max-width: 700px; margin: 0 auto;" data-reveal>
+      <div style="text-align: center; max-width: 700px; margin: 0 auto 50px;" data-reveal>
         <div class="cap" style="color: var(--gold-deep); margin-bottom: 12px;">Guiding Principles</div>
         <h2 class="hd" style="font-size: clamp(30px, 3.5vw, 44px);">Our Values in Action</h2>
         <p class="body" style="margin-top: 12px;">How our team works together and delivers lasting value for partners worldwide.</p>
@@ -448,7 +597,7 @@
     </div>
   </section>
 
-  <!-- Lasting Partnerships & Testimonial -->
+  <!-- Story Arc 6: Lasting Partnerships & Editorial Testimonial -->
   <section class="section wrap" style="padding-top: 90px; padding-bottom: 90px;">
     <div class="quote-layout-grid">
       <div class="quote-image-wrap" data-reveal>

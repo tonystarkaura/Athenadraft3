@@ -207,20 +207,10 @@
   </aside>
 
   <!-- Page Hero Banner -->
+  <!-- Page Hero Banner -->
   <section class="page-hero">
     <div class="wrap">
       <div class="page-hero-inner" data-reveal>
-        <div class="breadcrumbs">
-          <a href="index.html">Home</a>
-          <span class="breadcrumbs-sep">/</span>
-          <a href="about-us.html">About Us</a>
-          <span class="breadcrumbs-sep">/</span>
-          <span>Community Compass</span>
-        </div>
-        <div class="page-hero-badge">
-          <span class="pill-glow-dot"></span>
-          <span>Ground-Truth Intelligence Platform</span>
-        </div>
         <h1 class="disp page-hero-title">Community Compass</h1>
         <p class="body page-hero-lead">
           India's Verification &amp; Ground-Truth Intelligence Platform: A technology-enabled network of 2,100+ certified local-language field professionals delivering verified, geo-validated intelligence across every PIN code in India.
@@ -260,76 +250,170 @@
     </div>
   </section>
 
-  <!-- Six Service Verticals -->
+  <!-- Interactive Six Service Verticals Story Explorer -->
   <section class="section" style="background: var(--offwhite); padding: 90px 0; border-top: 1px solid var(--hair); border-bottom: 1px solid var(--hair);">
     <div class="wrap">
-      <div style="max-width: 760px;" data-reveal>
+      <div style="max-width: 760px; margin-bottom: 40px;" data-reveal>
         <div class="cap" style="color: var(--gold-deep); margin-bottom: 12px;">Core Capabilities</div>
         <h2 class="hd" style="font-size: clamp(30px, 3.5vw, 44px);">Six Service Verticals</h2>
-        <p class="body" style="margin-top: 12px;">
-          Community Compass delivers structured, insurance-grade field intelligence across six specialised practice areas:
+        <p class="body" style="margin-top: 12px; font-size: 17.5px;">
+          Community Compass delivers structured, insurance-grade field intelligence across six specialised practice areas. Select a vertical to explore operational subtopics.
         </p>
       </div>
 
-      <div class="verticals-grid">
-        <!-- Vertical 1 -->
-        <div class="vertical-card" data-reveal>
-          <div class="vertical-num">Vertical 01</div>
-          <h3 class="vertical-title">Decision Intelligence &amp; Impact Analytics</h3>
-          <div class="vertical-subtopics">Need Assessment · Baseline · Midline · Endline · Impact Evaluation</div>
-          <p class="vertical-desc">
-            Donor-ready primary data and evidence for programme decisions— local-language delivery, FPIC protocols, built to withstand funder and government scrutiny.
-          </p>
+      <div class="story-explorer" data-reveal>
+        <div class="explorer-nav">
+          <button class="explorer-step-btn active" data-target-pane="vert-1">
+            <div class="explorer-step-info">
+              <span class="explorer-step-title">Decision Intelligence &amp; Impact Analytics</span>
+              <span class="explorer-step-sub">Baseline · Midline · Endline · Evaluations</span>
+            </div>
+          </button>
+
+          <button class="explorer-step-btn" data-target-pane="vert-2">
+            <div class="explorer-step-info">
+              <span class="explorer-step-title">Vernacular AI Data Engineering</span>
+              <span class="explorer-step-sub">15+ Indian languages · Image, voice, text</span>
+            </div>
+          </button>
+
+          <button class="explorer-step-btn" data-target-pane="vert-3">
+            <div class="explorer-step-info">
+              <span class="explorer-step-title">Geospatial &amp; Environmental Intelligence</span>
+              <span class="explorer-step-sub">Satellite ground-truthing · Soil sampling</span>
+            </div>
+          </button>
+
+          <button class="explorer-step-btn" data-target-pane="vert-4">
+            <div class="explorer-step-info">
+              <span class="explorer-step-title">Credit &amp; Risk Scoring Intelligence</span>
+              <span class="explorer-step-sub">PMFBY crop cutting · SHG/FPO grading</span>
+            </div>
+          </button>
+
+          <button class="explorer-step-btn" data-target-pane="vert-5">
+            <div class="explorer-step-info">
+              <span class="explorer-step-title">Digital Inclusion &amp; Last-Mile Enablement</span>
+              <span class="explorer-step-sub">DPI adoption · Onboarding · Handholding</span>
+            </div>
+          </button>
+
+          <button class="explorer-step-btn" data-target-pane="vert-6">
+            <div class="explorer-step-info">
+              <span class="explorer-step-title">Capability &amp; Enterprise Skilling</span>
+              <span class="explorer-step-sub">Frontline workers · FPO boards · Vernacular</span>
+            </div>
+          </button>
         </div>
 
-        <!-- Vertical 2 -->
-        <div class="vertical-card" data-reveal style="transition-delay: 0.1s;">
-          <div class="vertical-num">Vertical 02</div>
-          <h3 class="vertical-title">Vernacular AI Data Engineering</h3>
-          <div class="vertical-subtopics">Image · Voice · Text · Behavioural Data · Vernacular Datasets</div>
-          <p class="vertical-desc">
-            Structured collection and annotation across 15+ Indian languages with ethical provenance and consent built in — purpose-built for India's AI ecosystem.
-          </p>
-        </div>
+        <div class="explorer-panes">
+          <!-- Vertical 1 -->
+          <div id="vert-1" class="explorer-pane active">
+            <div class="explorer-pane-header">
+              <h3 class="explorer-pane-title">Decision Intelligence &amp; Impact Analytics</h3>
+            </div>
+            <div style="font-size: 14.5px; font-weight: 700; color: var(--gold-deep); margin-bottom: 16px;">
+              Need Assessment · Baseline · Midline · Endline · Impact Evaluation
+            </div>
+            <p class="explorer-pane-desc">
+              Donor-ready primary data and evidence for programme decisions— local-language delivery, FPIC protocols, built to withstand funder and government scrutiny.
+            </p>
+            <div class="explorer-feature-chips">
+              <span class="explorer-feature-chip">FPIC Protocols</span>
+              <span class="explorer-feature-chip">Donor-Grade Primary Data</span>
+              <span class="explorer-feature-chip">Funder Scrutiny Built-in</span>
+            </div>
+          </div>
 
-        <!-- Vertical 3 -->
-        <div class="vertical-card" data-reveal style="transition-delay: 0.2s;">
-          <div class="vertical-num">Vertical 03</div>
-          <h3 class="vertical-title">Geospatial &amp; Environmental Intelligence</h3>
-          <div class="vertical-subtopics">Verification · Geo-tagging · Satellite Validation · Soil Sampling</div>
-          <p class="vertical-desc">
-            Independent on-ground verification of satellite and drone data — certified, insurance-grade, legally defensible.
-          </p>
-        </div>
+          <!-- Vertical 2 -->
+          <div id="vert-2" class="explorer-pane">
+            <div class="explorer-pane-header">
+              <h3 class="explorer-pane-title">Vernacular AI Data Engineering</h3>
+            </div>
+            <div style="font-size: 14.5px; font-weight: 700; color: var(--gold-deep); margin-bottom: 16px;">
+              Image · Voice · Text · Behavioural Data · Vernacular Datasets
+            </div>
+            <p class="explorer-pane-desc">
+              Structured collection and annotation across 15+ Indian languages with ethical provenance and consent built in — purpose-built for India's AI ecosystem.
+            </p>
+            <div class="explorer-feature-chips">
+              <span class="explorer-feature-chip">15+ Languages</span>
+              <span class="explorer-feature-chip">Ethical Consent Provenance</span>
+              <span class="explorer-feature-chip">Audio &amp; Text Annotation</span>
+            </div>
+          </div>
 
-        <!-- Vertical 4 -->
-        <div class="vertical-card" data-reveal>
-          <div class="vertical-num">Vertical 04</div>
-          <h3 class="vertical-title">Credit &amp; Risk Scoring Intelligence</h3>
-          <div class="vertical-subtopics">Crop Cutting · Yield Assessment · SHG / FPO Grading</div>
-          <p class="vertical-desc">
-            PMFBY-aligned yield science and structured SHG/FPO grading that generate underwriting-grade data for credit and insurance readiness.
-          </p>
-        </div>
+          <!-- Vertical 3 -->
+          <div id="vert-3" class="explorer-pane">
+            <div class="explorer-pane-header">
+              <h3 class="explorer-pane-title">Geospatial &amp; Environmental Intelligence</h3>
+            </div>
+            <div style="font-size: 14.5px; font-weight: 700; color: var(--gold-deep); margin-bottom: 16px;">
+              Verification · Geo-tagging · Satellite Validation · Soil Sampling
+            </div>
+            <p class="explorer-pane-desc">
+              Independent on-ground verification of satellite and drone data — certified, insurance-grade, legally defensible.
+            </p>
+            <div class="explorer-feature-chips">
+              <span class="explorer-feature-chip">Satellite Ground-Truthing</span>
+              <span class="explorer-feature-chip">Geo-Tagging Audits</span>
+              <span class="explorer-feature-chip">Defensible Verification</span>
+            </div>
+          </div>
 
-        <!-- Vertical 5 -->
-        <div class="vertical-card" data-reveal style="transition-delay: 0.1s;">
-          <div class="vertical-num">Vertical 05</div>
-          <h3 class="vertical-title">Digital Inclusion &amp; Last-Mile Enablement</h3>
-          <div class="vertical-subtopics">Prototype · Pilot · Finalise · Onboard · Handhold</div>
-          <p class="vertical-desc">
-            End-to-end digital adoption in local languages, paced for community uptake – aligned to India's Digital Public Infrastructure mission.
-          </p>
-        </div>
+          <!-- Vertical 4 -->
+          <div id="vert-4" class="explorer-pane">
+            <div class="explorer-pane-header">
+              <h3 class="explorer-pane-title">Credit &amp; Risk Scoring Intelligence</h3>
+            </div>
+            <div style="font-size: 14.5px; font-weight: 700; color: var(--gold-deep); margin-bottom: 16px;">
+              Crop Cutting · Yield Assessment · SHG / FPO Grading
+            </div>
+            <p class="explorer-pane-desc">
+              PMFBY-aligned yield science and structured SHG/FPO grading that generate underwriting-grade data for credit and insurance readiness.
+            </p>
+            <div class="explorer-feature-chips">
+              <span class="explorer-feature-chip">PMFBY Yield Science</span>
+              <span class="explorer-feature-chip">Underwriting-Grade Data</span>
+              <span class="explorer-feature-chip">SHG/FPO Grading</span>
+            </div>
+          </div>
 
-        <!-- Vertical 6 -->
-        <div class="vertical-card" data-reveal style="transition-delay: 0.2s;">
-          <div class="vertical-num">Vertical 06</div>
-          <h3 class="vertical-title">Capability &amp; Enterprise Skilling Systems</h3>
-          <div class="vertical-subtopics">Frontline Workers · FPO Boards · SHG Leaders · Community Entrepreneurs</div>
-          <p class="vertical-desc">
-            Competency mapping and contextual capacity building in vernacular – a recurring skilling system, not a one-off training event.
-          </p>
+          <!-- Vertical 5 -->
+          <div id="vert-5" class="explorer-pane">
+            <div class="explorer-pane-header">
+              <h3 class="explorer-pane-title">Digital Inclusion &amp; Last-Mile Enablement</h3>
+            </div>
+            <div style="font-size: 14.5px; font-weight: 700; color: var(--gold-deep); margin-bottom: 16px;">
+              Prototype · Pilot · Finalise · Onboard · Handhold
+            </div>
+            <p class="explorer-pane-desc">
+              End-to-end digital adoption in local languages, paced for community uptake – aligned to India's Digital Public Infrastructure mission.
+            </p>
+            <div class="explorer-feature-chips">
+              <span class="explorer-feature-chip">DPI Enablement</span>
+              <span class="explorer-feature-chip">Community Onboarding</span>
+              <span class="explorer-feature-chip">Last-Mile Support</span>
+            </div>
+          </div>
+
+          <!-- Vertical 6 -->
+          <div id="vert-6" class="explorer-pane">
+            <div class="explorer-pane-header">
+              <h3 class="explorer-pane-title">Capability &amp; Enterprise Skilling Systems</h3>
+            </div>
+            <div style="font-size: 14.5px; font-weight: 700; color: var(--gold-deep); margin-bottom: 16px;">
+              Frontline Workers · FPO Boards · SHG Leaders · Community Entrepreneurs
+            </div>
+            <p class="explorer-pane-desc">
+              Competency mapping and contextual capacity building in vernacular – a recurring skilling system, not a one-off training event.
+            </p>
+            <div class="explorer-feature-chips">
+              <span class="explorer-feature-chip">Recurring Skilling System</span>
+              <span class="explorer-feature-chip">Competency Mapping</span>
+              <span class="explorer-feature-chip">Frontline Empowerment</span>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -341,45 +425,46 @@
     </div>
   </section>
 
-  <!-- Quality Architecture -->
+  <!-- Quality Architecture Pipeline -->
   <section class="section wrap" style="padding-top: 90px; padding-bottom: 90px;">
     <div style="max-width: 800px;" data-reveal>
       <div class="cap" style="color: var(--gold-deep); margin-bottom: 12px;">Assurance Framework</div>
       <h2 class="hd" style="font-size: clamp(30px, 3.5vw, 44px);">Quality Architecture</h2>
-      <p class="body" style="margin-top: 12px;">
+      <p class="body" style="margin-top: 12px; font-size: 17.5px;">
         Community Compass helps organisations move beyond basic data collection to trusted, real-time field intelligence they can act on with confidence.
       </p>
     </div>
 
-    <div class="quality-grid">
-      <div class="quality-card" data-reveal>
-        <h3 class="quality-card-title">Trusted Local Teams</h3>
-        <p class="quality-card-desc">Ethically certified, community-based field teams enabling authentic responses and genuine ground-truth engagement.</p>
+    <!-- 6 Quality Architecture Cards -->
+    <div class="qa-pipeline-grid" data-reveal>
+      <div class="qa-step-card">
+        <h3 class="qa-step-title">Trusted Local Teams</h3>
+        <p class="qa-step-desc">Ethically certified, community-based field teams enabling authentic responses and genuine ground-truth engagement.</p>
       </div>
 
-      <div class="quality-card" data-reveal style="transition-delay: 0.1s;">
-        <h3 class="quality-card-title">Rigorous Field Readiness</h3>
-        <p class="quality-card-desc">In-depth training, mock interviews, field exposure visits, piloting, and pilot debriefs. Mandatory certification in research ethics, POSH, POCSO, and marginalised community engagement.</p>
+      <div class="qa-step-card">
+        <h3 class="qa-step-title">Rigorous Field Readiness</h3>
+        <p class="qa-step-desc">In-depth training, mock interviews, field exposure visits, piloting, and pilot debriefs. Mandatory certification in research ethics, POSH, POCSO, and marginalised community engagement.</p>
       </div>
 
-      <div class="quality-card" data-reveal style="transition-delay: 0.2s;">
-        <h3 class="quality-card-title">AI-Enabled Error Detection</h3>
-        <p class="quality-card-desc">CAPI surveys with built-in logical validations and real-time algorithmic error detection to intercept anomalies instantly.</p>
+      <div class="qa-step-card">
+        <h3 class="qa-step-title">AI-Enabled Error Detection</h3>
+        <p class="qa-step-desc">CAPI surveys with built-in logical validations and real-time algorithmic error detection to intercept anomalies instantly.</p>
       </div>
 
-      <div class="quality-card" data-reveal>
-        <h3 class="quality-card-title">Live Client Dashboards</h3>
-        <p class="quality-card-desc">Real-time tracking of field progress, quality indicators, surveyor activity logs, and geographic sample coverage.</p>
+      <div class="qa-step-card">
+        <h3 class="qa-step-title">Live Client Dashboards</h3>
+        <p class="qa-step-desc">Real-time tracking of field progress, quality indicators, surveyor activity logs, and geographic sample coverage.</p>
       </div>
 
-      <div class="quality-card" data-reveal style="transition-delay: 0.1s;">
-        <h3 class="quality-card-title">GPS &amp; Multimedia Verification</h3>
-        <p class="quality-card-desc">GPS coordinates, time-stamped audits, audio recordings, and geotagged imagery for undeniable field authenticity.</p>
+      <div class="qa-step-card">
+        <h3 class="qa-step-title">GPS &amp; Multimedia Verification</h3>
+        <p class="qa-step-desc">GPS coordinates, time-stamped audits, audio recordings, and geotagged imagery for undeniable field authenticity.</p>
       </div>
 
-      <div class="quality-card" data-reveal style="transition-delay: 0.2s;">
-        <h3 class="quality-card-title">Multi-Layer Verification</h3>
-        <p class="quality-card-desc">Spot checks, back checks, independent telephonic re-interviews, and senior supervisor auditing layers.</p>
+      <div class="qa-step-card">
+        <h3 class="qa-step-title">Multi-Layer Verification</h3>
+        <p class="qa-step-desc">Spot checks, back checks, independent telephonic re-interviews, and senior supervisor auditing layers.</p>
       </div>
     </div>
   </section>
