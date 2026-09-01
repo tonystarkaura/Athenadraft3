@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Athena Infonomics | Insights for Impact. Data for Development.</title>
+  
+  <!-- SEO Meta -->
+  <meta name="description" content="Athena Infonomics applies social science research, data analytics, and digital technology to advance global development across 60+ countries." />
+  <meta property="og:title" content="Athena Infonomics | Insights for Impact" />
+  <meta property="og:description" content="Insights that change the decision, not just the report." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="64x64" href="images/favicon.png" />
+  <link rel="apple-touch-icon" sizes="192x192" href="images/apple-touch-icon.png" />
+  <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+
+  <!-- Google Fonts: Lato Family (Brand Standard) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700&display=swap" rel="stylesheet" />
+
+  <!-- Brand Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <!-- ==========================================================================
+       01. BESPOKE PRECISION OPTIC & MAGNETIC CURSOR
+       ========================================================================== -->
+  <div id="custom-cursor-core" class="custom-cursor-core">
+    <div class="cursor-dot-center"></div>
+  </div>
+  <div id="custom-cursor-optic" class="custom-cursor-optic">
+    <div class="optic-reticle-ring"></div>
+    <div class="optic-bracket optic-tl"></div>
+    <div class="optic-bracket optic-tr"></div>
+    <div class="optic-bracket optic-br"></div>
+    <div class="optic-bracket optic-bl"></div>
+    <span id="cursor-action-tag" class="cursor-action-tag"></span>
+  </div>
+  <div id="cursor-click-pulse" class="cursor-click-pulse"></div>
+
+  <!-- ==========================================================================
+       02. TOP GOLD SCROLL PROGRESS INDICATOR
+       ========================================================================== -->
+  <div id="scroll-progress-line" class="scroll-progress-line"></div>
+
+  <!-- ==========================================================================
+       03. ORIGINAL BRAND PRELOADER (PRESERVED)
+       ========================================================================== -->
+  <div id="preloader" class="preloader" aria-hidden="true">
+    <div class="preloader-content">
+      <img src="images/athena-logo-white.png" alt="Athena Infonomics" class="preloader-logo" />
+      <div class="preloader-progress-track">
+        <div id="preloader-bar" class="preloader-progress-bar">
+          <span class="preloader-trail-dot"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       04. SITE HEADER & NAVIGATION
+       ========================================================================== -->
+  <header class="site-header">
+    <div class="wrap nav-container">
+      <!-- Athena Infonomics Brand Logo -->
+      <a href="index.html" class="brand-logo-link" aria-label="Athena Infonomics Home">
+        <img src="images/athena-logo.png" alt="Athena Infonomics Logo" class="brand-logo-img" />
+      </a>
+
+      <!-- Navigation Links with Dropdowns -->
+      <nav id="nav-menu" class="nav-menu" role="navigation">
+        <div class="nav-item active">
+          <a href="index.html" class="nl nav-link">Home</a>
+        </div>
+
+        <div class="nav-item has-dropdown">
+          <a href="#about" class="nl nav-link">
+            About
+            <svg class="dropdown-icon" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+          </a>
+          <div class="nav-dropdown">
+            <a href="about-us.html" class="dropdown-link">
+              <span class="dropdown-title">Our Story</span>
+              <span class="dropdown-desc">Mission, values &amp; 15-year journey</span>
+            </a>
+            <a href="athena-turns-15.html" class="dropdown-link">
+              <span class="dropdown-title">Athena Turns 15</span>
+              <span class="dropdown-desc">Milestone reflections &amp; leadership voices</span>
+            </a>
+            <a href="community-compass.html" class="dropdown-link">
+              <span class="dropdown-title">Community Compass</span>
+              <span class="dropdown-desc">Ethical data network &amp; field operations</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="nav-item has-dropdown">
+          <a href="#services" class="nl nav-link">
+            Services
+            <svg class="dropdown-icon" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+          </a>
+          <div class="nav-dropdown">
+            <a href="solutions/discover.html" class="dropdown-link">
+              <span class="dropdown-title">Discover</span>
+              <span class="dropdown-desc">Rigorous social science &amp; primary research</span>
+            </a>
+            <a href="solutions/inform.html" class="dropdown-link">
+              <span class="dropdown-title">Inform</span>
+              <span class="dropdown-desc">Analytics, MERL &amp; digital architectures</span>
+            </a>
+            <a href="solutions/transform.html" class="dropdown-link">
+              <span class="dropdown-title">Transform</span>
+              <span class="dropdown-desc">Technical support &amp; systemic policy reform</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="nav-item has-dropdown">
+          <a href="#work" class="nl nav-link">
+            Work
+            <svg class="dropdown-icon" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+          </a>
+          <div class="nav-dropdown">
+            <a href="work/projects.html" class="dropdown-link">
+              <span class="dropdown-title">Projects Directory</span>
+              <span class="dropdown-desc">430+ client engagements worldwide</span>
+            </a>
+            <a href="work/digital-tools-and-platforms.html" class="dropdown-link">
+              <span class="dropdown-title">Digital Tools &amp; Platforms</span>
+              <span class="dropdown-desc">TolaData &amp; interactive dashboards</span>
+            </a>
+            <a href="work/resources.html" class="dropdown-link">
+              <span class="dropdown-title">Publications &amp; Resources</span>
+              <span class="dropdown-desc">Reports, policy briefs &amp; toolkits</span>
+            </a>
+            <a href="work/blog.html" class="dropdown-link">
+              <span class="dropdown-title">Blog &amp; Insights</span>
+              <span class="dropdown-desc">Field reflections &amp; policy commentary</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="nav-item has-dropdown">
+          <a href="our-people.1.html" class="nl nav-link">
+            People
+            <svg class="dropdown-icon" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+          </a>
+          <div class="nav-dropdown">
+            <a href="team.1.html" class="dropdown-link">
+              <span class="dropdown-title">Leadership &amp; Team</span>
+              <span class="dropdown-desc">95+ global development specialists</span>
+            </a>
+            <a href="our-people/index.html#jobs-posting" class="dropdown-link">
+              <span class="dropdown-title">Careers</span>
+              <span class="dropdown-desc">Join our impact &amp; research network</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="nav-item">
+          <a href="#top" class="nl nav-link">Ecosystem</a>
+        </div>
+
+        <div class="nav-item">
+          <a href="#insights" class="nl nav-link">Insights</a>
+        </div>
+
+        <div class="nav-item">
+          <a href="contact.html" class="nl nav-link">Contact</a>
+        </div>
+      </nav>
+
+      <!-- Action & Mobile Menu Toggle -->
+      <div style="display: flex; align-items: center; gap: 16px;">
+        <a href="contact.html" class="btn btn-primary btn-sm">Partner With Us</a>
+        <button id="menu-toggle" class="menu-toggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       05. HERO SECTION (THE ATHENA ECOSYSTEM · PARENT & CHILD PLATFORMS)
+       ========================================================================== -->
+  <section id="top" class="hero-section hero-video-mode">
+    <!-- Full-Bleed Sympathetic Background Video Player -->
+    <div class="hero-video-backdrop" aria-hidden="true">
+      <video id="hero-bg-video" class="hero-video-element" autoplay loop muted playsinline poster="images/hero-fieldwork.jpg">
+        <source src="videos/hero-agronomy-field-research-32190.mp4" type="video/mp4" />
+        <source src="videos/hero-drone-survey-outdoors-44644.mp4" type="video/mp4" />
+        <source src="videos/hero-woman-tablet-field-24129.mp4" type="video/mp4" />
+      </video>
+      <!-- Cinematic Multi-Layer Gradient Overlays for High Legibility -->
+      <div class="hero-video-overlay"></div>
+      <div class="hero-video-vignette"></div>
+    </div>
+
+    <!-- Floating Atmospheric Data-Dots Canvas (Preserved Interactive Engine) -->
+    <div id="ath-field" class="hero-dots-field hero-dots-ambient" aria-hidden="true"></div>
+
+    <!-- Hero Content Container -->
+    <div class="wrap hero-content-container">
+      <div class="hero-main-column">
+        <!-- Eyebrow Pill Tag -->
+        <div class="hero-pill-badge" data-reveal>
+          <span class="pill-glow-dot"></span>
+          <span id="hero-eyebrow-text">THE ATHENA ECOSYSTEM · PARENT FOUNDATION</span>
+        </div>
+
+        <!-- Display Headline -->
+        <h1 class="disp hero-display-title" data-reveal>
+          <span id="hero-title-text">Everything begins<br class="hero-br"> with Athena.</span>
+        </h1>
+
+        <!-- Narrative Lead Paragraph -->
+        <p id="hero-lead-text" class="body hero-lead-text" data-reveal>
+          Athena Infonomics is the parent foundation behind an interconnected social impact ecosystem. APLYD and TolaData share our institutional foundation and carry their own identities. From ground-truth research and policy advisory to applied artificial intelligence and M&amp;E software, explore how our ecosystem turns data into operational intelligence.
+        </p>
+
+        <!-- Primary & Secondary CTA Buttons -->
+        <div class="hero-cta-group" data-reveal>
+          <a href="about-us.html" class="btn btn-hero-gold">Explore Athena Story</a>
+          <a href="contact.html" class="btn btn-hero-outline">Partner With Us</a>
+        </div>
+      </div>
+
+      <!-- 3 Ecosystem Entity Cards Directly in the Hero -->
+      <div class="hero-ecosystem-grid" data-reveal style="transition-delay: 0.12s;">
+        <!-- Pillar 1: Athena Infonomics (Parent) -->
+        <div class="hero-ecosystem-card active" data-story="0">
+          <div>
+            <div class="hero-eco-header">
+              <div class="hero-eco-badge">
+                <span class="hero-eco-dot gold-pulse"></span>
+                <span>Origin &amp; Practice</span>
+              </div>
+              <span class="hero-eco-tag">Parent Foundation</span>
+            </div>
+            <h3 class="hero-eco-card-title">Athena Infonomics</h3>
+            <div class="hero-eco-role">Research · Evidence · Policy Advisory</div>
+            <p class="hero-eco-card-desc">
+              The research, evaluation, and policy advisory practice. Evidence, field rigor, and delivery across 60+ countries worldwide.
+            </p>
+          </div>
+          <a href="about-us.html" class="hero-eco-cta">
+            <span>Explore Athena</span>
+            <span class="cta-arrow">→</span>
+          </a>
+        </div>
+
+        <!-- Pillar 2: APLYD (Child 1) -->
+        <div class="hero-ecosystem-card" data-story="1">
+          <div>
+            <div class="hero-eco-header">
+              <div class="hero-eco-badge">
+                <span class="hero-eco-dot"></span>
+                <span>Applied AI Partner</span>
+              </div>
+              <span class="hero-eco-tag">Child Company</span>
+            </div>
+            <h3 class="hero-eco-card-title">APLYD</h3>
+            <div class="hero-eco-role">Chief AI Officer for Institutions</div>
+            <p class="hero-eco-card-desc">
+              The Chief AI Officer for institutions — applied intelligence built on data that reflects operational reality and ethical governance.
+            </p>
+          </div>
+          <a href="https://aplyd.com" target="_blank" rel="noopener noreferrer" class="hero-eco-cta external">
+            <span>Visit APLYD.com</span>
+            <span class="cta-arrow">↗</span>
+          </a>
+        </div>
+
+        <!-- Pillar 3: TolaData (Child 2) -->
+        <div class="hero-ecosystem-card" data-story="2">
+          <div>
+            <div class="hero-eco-header">
+              <div class="hero-eco-badge">
+                <span class="hero-eco-dot"></span>
+                <span>Software Platform</span>
+              </div>
+              <span class="hero-eco-tag">Child Company</span>
+            </div>
+            <h3 class="hero-eco-card-title">TolaData</h3>
+            <div class="hero-eco-role">Monitoring &amp; Evaluation Software</div>
+            <p class="hero-eco-card-desc">
+              Web-based monitoring and evaluation software built for development teams that manage indicator tracking and report on results.
+            </p>
+          </div>
+          <a href="https://www.toladata.com" target="_blank" rel="noopener noreferrer" class="hero-eco-cta external">
+            <span>Visit TolaData.com</span>
+            <span class="cta-arrow">↗</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Storytelling Chapter Navigation & Video Status Footer -->
+      <div class="hero-story-footer" data-reveal>
+        <div class="hero-story-nav" role="tablist" aria-label="Ecosystem Entity Navigation">
+          <button class="hero-story-pill active" role="tab" aria-selected="true" data-story="0">
+            <span class="story-dot"></span>
+            <span class="story-label">01. Athena Infonomics (Parent)</span>
+          </button>
+          <button class="hero-story-pill" role="tab" aria-selected="false" data-story="1">
+            <span class="story-dot"></span>
+            <span class="story-label">02. APLYD (Applied AI)</span>
+          </button>
+          <button class="hero-story-pill" role="tab" aria-selected="false" data-story="2">
+            <span class="story-dot"></span>
+            <span class="story-label">03. TolaData (M&amp;E Software)</span>
+          </button>
+        </div>
+
+        <!-- Ambient Video Playback Toggle & Location Tag -->
+        <div class="hero-media-actions">
+          <button id="video-toggle-btn" class="video-control-pill" aria-label="Pause background video" title="Toggle background video playback">
+            <svg class="video-icon video-icon-pause" viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
+              <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+            </svg>
+            <svg class="video-icon video-icon-play" viewBox="0 0 24 24" width="14" height="14" fill="currentColor" style="display: none;">
+              <path d="M8 5v14l11-7z"/>
+            </svg>
+            <span id="video-toggle-text">Pause Story</span>
+          </button>
+          <div class="live-story-indicator">
+            <span class="live-beacon"></span>
+            <span id="hero-caption-text">Parent Foundation · 60+ Nations</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       06. SECTOR FOCUS MARQUEE TICKER
+       ========================================================================== -->
+  <section class="section-ticker" aria-label="Athena Global Focus Areas">
+    <div class="ticker-track">
+      <div class="ticker-group">
+        <span>Agriculture &amp; Food Systems</span><span class="ticker-dot"></span>
+        <span>Water, Sanitation &amp; Hygiene</span><span class="ticker-dot"></span>
+        <span>Climate Resilience &amp; Environment</span><span class="ticker-dot"></span>
+        <span>Public Health &amp; Nutrition</span><span class="ticker-dot"></span>
+        <span>Digital Public Infrastructure</span><span class="ticker-dot"></span>
+        <span>Gender &amp; Social Inclusion</span><span class="ticker-dot"></span>
+        <span>Governance &amp; Public Finance</span><span class="ticker-dot"></span>
+        <span>Applied AI &amp; Data Systems</span><span class="ticker-dot"></span>
+        <span>MERL &amp; Impact Evaluation</span><span class="ticker-dot"></span>
+      </div>
+      <div class="ticker-group" aria-hidden="true">
+        <span>Agriculture &amp; Food Systems</span><span class="ticker-dot"></span>
+        <span>Water, Sanitation &amp; Hygiene</span><span class="ticker-dot"></span>
+        <span>Climate Resilience &amp; Environment</span><span class="ticker-dot"></span>
+        <span>Public Health &amp; Nutrition</span><span class="ticker-dot"></span>
+        <span>Digital Public Infrastructure</span><span class="ticker-dot"></span>
+        <span>Gender &amp; Social Inclusion</span><span class="ticker-dot"></span>
+        <span>Governance &amp; Public Finance</span><span class="ticker-dot"></span>
+        <span>Applied AI &amp; Data Systems</span><span class="ticker-dot"></span>
+        <span>MERL &amp; Impact Evaluation</span><span class="ticker-dot"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       07. KEY METRICS & MILESTONES (EASED COUNT-UP ENGINE)
+       ========================================================================== -->
+  <section id="about" class="section-metrics wrap">
+    <div class="metrics-grid">
+      <div class="metric-box" data-reveal>
+        <div class="metric-num-disp" data-count="15" data-suffix="+">0</div>
+        <div class="cap" style="margin-top: 14px;">Years Driving Impact</div>
+        <p class="body" style="font-size: 14px; margin-top: 6px;">Pioneering social science research, data analytics, and digital innovation since 2010.</p>
+      </div>
+
+      <div class="metric-box" data-reveal style="transition-delay: 0.1s;">
+        <div class="metric-num-disp" data-count="60" data-suffix="+">0</div>
+        <div class="cap" style="margin-top: 14px;">Countries Reached</div>
+        <p class="body" style="font-size: 14px; margin-top: 6px;">Global insights and local implementation with deep field experience across Asia, Africa &amp; Latin America.</p>
+      </div>
+
+      <div class="metric-box highlight" data-reveal style="transition-delay: 0.2s;">
+        <div class="metric-num-disp" data-count="430" data-suffix="+">0</div>
+        <div class="cap" style="margin-top: 14px;">Projects Completed</div>
+        <p class="body" style="font-size: 14px; margin-top: 6px;">Evidence-based evaluations, technical assistance, and data systems for global development partners.</p>
+      </div>
+
+      <div class="metric-box" data-reveal style="transition-delay: 0.3s;">
+        <div class="metric-num-disp" data-count="2800" data-suffix="+">0</div>
+        <div class="cap" style="margin-top: 14px;">Certified Field Specialists</div>
+        <p class="body" style="font-size: 14px; margin-top: 6px;">Ethically certified, culturally responsive data professionals deployed nationwide via Community Compass.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       08. THREE CONNECTED PRACTICES (DISCOVER · INFORM · TRANSFORM)
+       ========================================================================== -->
+  <section id="services" class="section-services wrap">
+    <div class="services-layout">
+      <!-- Sticky Sidebar -->
+      <div class="services-sticky-sidebar" data-reveal>
+        <div class="cap" style="color: var(--gold-deep); margin-bottom: 18px;">Our Connected Practice</div>
+        <h2 class="hd" style="font-size: clamp(32px, 3.4vw, 44px);">Discover.<br>Inform.<br>Transform.</h2>
+        <p class="body" style="margin-top: 20px; font-size: 16px;">We turn complex development challenges into measurable progress by pairing rigorous social science research with actionable data architecture and embedded operational delivery.</p>
+        <div style="margin-top: 32px;">
+          <a href="about-us.html" class="ln">Explore Our Story <span class="ring"><span>→</span></span></a>
+        </div>
+      </div>
+
+      <!-- Vertical Step-Rail Interactive Sequence -->
+      <div id="ath-steps" class="services-steps-rail-wrap">
+        <div class="steprail" style="top: 54px; bottom: 54px;"></div>
+        <div id="ath-stepfill" class="steprail-fill" style="top: 54px; height: 0;"></div>
+
+        <!-- 01. Discover -->
+        <div class="svc" data-reveal>
+          <div class="cap" style="color: var(--smoke); padding-top: 6px; display: flex; align-items: center; gap: 16px;">
+            <span class="stepdot on"></span>01
+          </div>
+          <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <span class="sd"></span>
+            <h3 class="hd" style="font-size: 28px;">Discover</h3>
+          </div>
+          <div>
+            <p class="body" style="margin-bottom: 20px;">We begin with curiosity and a focus on questions that matter most. Through rigorous social science research, field data collection, and diagnostic studies, we uncover the economic, institutional, and behavioral drivers that shape systems and outcomes.</p>
+            <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px;">
+              <span class="pill">Primary Field Research</span>
+              <span class="pill">Mixed-Methods Studies</span>
+              <span class="pill">Community Compass Network</span>
+              <span class="pill">Research Ethics &amp; FPIC</span>
+            </div>
+            <a href="solutions/discover.html" class="ln" style="font-size: 14px;">Explore Discover <span>→</span></a>
+          </div>
+        </div>
+
+        <!-- 02. Inform -->
+        <div class="svc" data-reveal style="transition-delay: 0.1s;">
+          <div class="cap" style="color: var(--smoke); padding-top: 6px; display: flex; align-items: center; gap: 16px;">
+            <span class="stepdot"></span>02
+          </div>
+          <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <span class="sd"></span>
+            <h3 class="hd" style="font-size: 28px;">Inform</h3>
+          </div>
+          <div>
+            <p class="body" style="margin-bottom: 20px;">Making sense of complexity and charting actionable pathways forward. We blend systems thinking, design intelligence, techno-economic modeling, and data architecture to bridge evidence with scalable strategy.</p>
+            <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px;">
+              <span class="pill">Systems Thinking</span>
+              <span class="pill">Techno-Economic Planning</span>
+              <span class="pill">Data Architecture</span>
+              <span class="pill">Decision-Support &amp; AI Readiness</span>
+            </div>
+            <a href="solutions/inform.html" class="ln" style="font-size: 14px;">Explore Inform <span>→</span></a>
+          </div>
+        </div>
+
+        <!-- 03. Transform -->
+        <div class="svc" data-reveal style="border-bottom: 1px solid var(--hair); transition-delay: 0.2s;">
+          <div class="cap" style="color: var(--smoke); padding-top: 6px; display: flex; align-items: center; gap: 16px;">
+            <span class="stepdot"></span>03
+          </div>
+          <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <span class="sd"></span>
+            <h3 class="hd" style="font-size: 28px;">Transform</h3>
+          </div>
+          <div>
+            <p class="body" style="margin-bottom: 20px;">Working shoulder-to-shoulder with governments and partners to operationalise reforms, embed Technical Support Units (TSUs), build institutional capacity, and deploy AI-enabled monitoring and learning platforms.</p>
+            <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px;">
+              <span class="pill">Embedded TSUs</span>
+              <span class="pill">Public Capacity Building</span>
+              <span class="pill">AI Sandboxing</span>
+              <span class="pill">Integrated MLE Systems</span>
+            </div>
+            <a href="solutions/transform.html" class="ln" style="font-size: 14px;">Explore Transform <span>→</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       09. SELECTED WORK & CASE STUDIES (FILTERABLE)
+       ========================================================================== -->
+  <section id="work" class="section-work wrap">
+    <div class="section-work-header">
+      <div>
+        <div class="cap" style="color: var(--gold-deep); margin-bottom: 10px;">Featured Engagements</div>
+        <h2 class="hd" data-reveal style="font-size: clamp(30px, 3.4vw, 44px);">Selected Work &amp; Field Studies</h2>
+      </div>
+      <a class="ln" href="work/projects.html">Explore 430+ Projects <span class="ring"><span>→</span></span></a>
+    </div>
+
+    <!-- Filter Category Tabs -->
+    <div class="work-filter-bar" role="tablist" aria-label="Project Categories">
+      <button class="filter-btn active" data-filter="all">All Projects</button>
+      <button class="filter-btn" data-filter="agri">Agriculture &amp; Food</button>
+      <button class="filter-btn" data-filter="water">Water &amp; Sanitation</button>
+      <button class="filter-btn" data-filter="governance">Governance &amp; AI</button>
+      <button class="filter-btn" data-filter="health">Health &amp; Education</button>
+    </div>
+
+    <!-- Primary Showcase Grid -->
+    <div class="work-primary-grid">
+      <!-- Project 1: Agriculture / Data Governance -->
+      <article class="project-card card" data-category="agri governance" data-reveal>
+        <div class="work-card-img-wrap">
+          <div class="lift">
+            <img src="images/work-water.jpg" alt="Developing Farmer-Centric Models of Data Governance" />
+          </div>
+        </div>
+        <div class="work-card-content">
+          <div class="cap" style="color: var(--gold-deep);">Agriculture &amp; Data Governance · USAID &amp; Gates Foundation</div>
+          <h3 class="hd" style="font-size: 26px; margin: 16px 0 14px;">Developing Farmer-Centric Models of Data Governance</h3>
+          <p class="body" style="font-size: 16px;">A seminal study establishing user-centric data governance frameworks, data trusts, and cooperatives to protect and empower smallholder farmers across LMICs.</p>
+          <div style="margin-top: 28px; display: flex; justify-content: space-between; align-items: center;">
+            <a href="projects/developing-farmer-centric-models-of-data-governance.html" class="ln">Read Case Study <span>→</span></a>
+            <span class="ring"><span>↗</span></span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 2: Governance / AI -->
+      <article class="project-card card" data-category="governance" data-reveal style="transition-delay: 0.12s;">
+        <div class="work-card-img-wrap">
+          <div class="lift">
+            <img src="images/work-governance.jpg" alt="Advancing AI Adoption in MSMEs" />
+          </div>
+        </div>
+        <div class="work-card-content">
+          <div class="cap" style="color: var(--gold-deep);">Governance &amp; Digital Economy · Technology Policy</div>
+          <h3 class="hd" style="font-size: 26px; margin: 16px 0 14px;">Advancing AI Adoption in Micro, Small &amp; Medium Enterprises</h3>
+          <p class="body" style="font-size: 16px;">Designing practical digital roadmaps, capability assessments, and institutional sandboxes to enable small enterprises to leverage AI effectively.</p>
+          <div style="margin-top: 28px; display: flex; justify-content: space-between; align-items: center;">
+            <a href="projects/advancing-ai-adoption-in-msmes.html" class="ln">Read Case Study <span>→</span></a>
+            <span class="ring"><span>↗</span></span>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <!-- Secondary Case Studies Grid -->
+    <div class="work-secondary-grid">
+      <!-- Secondary 1: Health -->
+      <article class="project-card work-secondary-card card" data-category="health" data-reveal>
+        <div class="cap" style="color: var(--navy-mid);">Public Health &amp; Nutrition · Field Assessment</div>
+        <h3 class="sub" style="margin-top: 14px;">Nutrition Intervention Study in Jharkhand &amp; Odisha</h3>
+        <p class="body" style="font-size: 15px; margin-top: 10px;">Empirical baseline evaluation measuring maternal and child nutrition indicators across high-burden rural districts.</p>
+        <a href="projects/baseline-assessment-study-for-nutrition-intervention-program-in-jharkhand-and-odisha.html" class="ln" style="font-size: 14px; margin-top: 18px;">Read Project Details <span>→</span></a>
+      </article>
+
+      <!-- Secondary 2: Agri -->
+      <article class="project-card work-secondary-card card" data-category="agri" data-reveal style="transition-delay: 0.1s;">
+        <div class="cap" style="color: var(--navy-mid);">Digital Agriculture · West Africa</div>
+        <h3 class="sub" style="margin-top: 14px;">Assessment of Mali’s Digital Agriculture Ecosystem</h3>
+        <p class="body" style="font-size: 15px; margin-top: 10px;">Comprehensive diagnostic mapping of digital tools, farmer adoption barriers, and data systems across agricultural value chains.</p>
+        <a href="projects/assessment-of-malis-digital-agriculture-ecosystem.html" class="ln" style="font-size: 14px; margin-top: 18px;">Read Project Details <span>→</span></a>
+      </article>
+
+      <!-- Secondary 3: Water / Education -->
+      <article class="project-card work-secondary-card card" data-category="health governance" data-reveal style="transition-delay: 0.2s;">
+        <div class="cap" style="color: var(--navy-mid);">Education &amp; Gender · UN Women</div>
+        <h3 class="sub" style="margin-top: 14px;">Second Chance Education &amp; Vocational Learning Programme</h3>
+        <p class="body" style="font-size: 15px; margin-top: 10px;">Measuring outcomes in skilling, enterprise development, and employment for marginalized women re-entering education in India.</p>
+        <a href="projects/endline-assessment-of-the-second-chance-education-and-vocational-learning-programme-in-india.html" class="ln" style="font-size: 14px; margin-top: 18px;">Read Project Details <span>→</span></a>
+      </article>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       10. LEADERSHIP VOICE & TESTIMONIAL QUOTE
+       ========================================================================== -->
+  <section id="trust" class="section-quote wrap">
+    <div class="quote-layout-grid">
+      <!-- Left: Portrait Image -->
+      <div class="quote-image-wrap" data-reveal>
+        <div class="lift">
+          <img src="images/quote-portrait.jpg" alt="Jenna Slotin Testimonial" />
+        </div>
+      </div>
+
+      <!-- Right: Quote Statement -->
+      <div data-reveal style="transition-delay: 0.12s;">
+        <span class="quote-dot-pulse"></span>
+        <blockquote class="quote-blockquote">
+          “Every engagement we’ve had with Athena has been positive from start to finish. Whether as a proactive member of the Global Partnership for Sustainable Development Data or providing research and analysis on data-sharing initiatives, the Athena team is thorough, creative, and quick to integrate feedback—establishing a strong, trusted relationship along with high-quality evidence.”
+        </blockquote>
+        <div class="quote-attribution">
+          <div class="quote-author-name">Jenna Slotin</div>
+          <div class="quote-author-role">Senior Director of Policy · The Global Partnership for Sustainable Development Data</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Institutional Recognitions -->
+    <div class="recognitions-row" data-reveal style="transition-delay: 0.15s;">
+      <div class="recognition-item">
+        <div class="recognition-icon-badge">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+        </div>
+        <div>
+          <div class="sub" style="font-size: 16px;">The Economic Times Growth Champions</div>
+          <p class="body" style="font-size: 13px; margin: 0;">Consecutive Honoree · 2021, 2022 &amp; 2023</p>
+        </div>
+      </div>
+
+      <div class="recognition-item">
+        <div class="recognition-icon-badge">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+        </div>
+        <div>
+          <div class="sub" style="font-size: 16px;">Financial Times High-Growth Companies</div>
+          <p class="body" style="font-size: 13px; margin: 0;">Asia-Pacific Honoree · 2021, 2022 &amp; 2025</p>
+        </div>
+      </div>
+
+      <div class="recognition-item">
+        <div class="recognition-icon-badge">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <div>
+          <div class="sub" style="font-size: 16px;">NASA SEWP-VI Prime Contractor</div>
+          <p class="body" style="font-size: 13px; margin: 0;">Global IT &amp; Analytics Solutions Awardee</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       11. LATEST INSIGHTS & RESEARCH
+       ========================================================================== -->
+  <section id="insights" class="section-insights wrap">
+    <div class="insights-header">
+      <div>
+        <div class="cap" style="color: var(--gold-deep); margin-bottom: 10px;">Knowledge &amp; Perspectives</div>
+        <h2 class="hd" data-reveal style="font-size: clamp(30px, 3.4vw, 44px);">Latest Insights &amp; Publications</h2>
+      </div>
+      <a class="ln" href="work/blog.html">View All Insights <span class="ring"><span>→</span></span></a>
+    </div>
+
+    <div class="insights-grid">
+      <!-- Insight 1 -->
+      <article class="insight-card card" data-reveal>
+        <div class="insight-thumb-wrap">
+          <div class="lift">
+            <img src="images/insight-farming.jpg" alt="The 15-Minute Conversation That Changed a Farming Decision" />
+          </div>
+        </div>
+        <div class="cap" style="color: var(--gold-deep);">Responsible AI &amp; Agriculture · 2026</div>
+        <h3 class="sub" style="margin: 14px 0 10px;">The 15-Minute Conversation That Changed a Farming Decision</h3>
+        <p class="spec" style="color: var(--navy-mid);">5 min read</p>
+        <div style="margin-top: 20px;">
+          <a href="blog-posts/the-15-minute-conversation-that-changed-a-farming-decision.html" class="ln" style="font-size: 14px;">Read Article <span>→</span></a>
+        </div>
+      </article>
+
+      <!-- Insight 2 -->
+      <article class="insight-card card" data-reveal style="transition-delay: 0.1s;">
+        <div class="insight-thumb-wrap">
+          <div class="lift">
+            <img src="images/case-agri-digital.jpg" alt="How Athena is Putting AI into Practice" />
+          </div>
+        </div>
+        <div class="cap" style="color: var(--gold-deep);">Applied AI · 2026</div>
+        <h3 class="sub" style="margin: 14px 0 10px;">How Athena is Putting Artificial Intelligence into Practice</h3>
+        <p class="spec" style="color: var(--navy-mid);">7 min read</p>
+        <div style="margin-top: 20px;">
+          <a href="blog-posts/how-athena-is-putting-ai-into-practice.html" class="ln" style="font-size: 14px;">Read Article <span>→</span></a>
+        </div>
+      </article>
+
+      <!-- Insight 3 -->
+      <article class="insight-card card" data-reveal style="transition-delay: 0.2s;">
+        <div class="insight-thumb-wrap">
+          <div class="lift">
+            <img src="images/insight-award.jpg" alt="Athena Awarded NASA SEWP-VI Award" />
+          </div>
+        </div>
+        <div class="cap" style="color: var(--gold-deep);">Institutional Milestone · 2026</div>
+        <h3 class="sub" style="margin: 14px 0 10px;">Athena Awarded NASA SEWP-VI Acquisition Contract</h3>
+        <p class="spec" style="color: var(--navy-mid);">3 min read</p>
+        <div style="margin-top: 20px;">
+          <a href="blog-posts/athena-awarded-nasa-sewp-vi-award.html" class="ln" style="font-size: 14px;">Read Article <span>→</span></a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       12. CALL TO ACTION SECTION
+       ========================================================================== -->
+  <section id="contact" class="section-contact-cta wrap">
+    <div class="contact-cta-grid">
+      <h2 class="disp contact-cta-title" data-reveal>
+        Ready to turn evidence into lasting global impact?
+      </h2>
+      <a class="ln" data-reveal href="contact.html" style="transition-delay: 0.15s; font-size: 18px;">
+        Connect with Our Team <span class="ring" style="border-color: var(--gold); color: var(--gold-deep); width: 44px; height: 44px; font-size: 18px;"><span>→</span></span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       13. DEEP NAVY FOOTER (#1A2150)
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-top-grid">
+        <div>
+          <img src="images/athena-logo-white.png" alt="Athena Infonomics" class="footer-brand-logo" />
+          <p class="footer-brand-desc">
+            Applying social science research, data analytics, and digital technology to advance global development across 60+ countries.
+          </p>
+          <div class="footer-locations">
+            Chennai · Washington D.C. · London · New Delhi · Nairobi
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Firm</div>
+          <div class="footer-links-list">
+            <a href="about-us.html" class="footer-link-item">About Us</a>
+            <a href="team.1.html" class="footer-link-item">Leadership &amp; Team</a>
+            <a href="athena-turns-15.html" class="footer-link-item">Athena Turns 15</a>
+            <a href="community-compass.html" class="footer-link-item">Community Compass</a>
+            <a href="our-people/index.html#jobs-posting" class="footer-link-item">Careers</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Work &amp; Solutions</div>
+          <div class="footer-links-list">
+            <a href="solutions/discover.html" class="footer-link-item">Discover (Research)</a>
+            <a href="solutions/inform.html" class="footer-link-item">Inform (Analytics &amp; MERL)</a>
+            <a href="solutions/transform.html" class="footer-link-item">Transform (Policy Reform)</a>
+            <a href="work/projects.html" class="footer-link-item">Projects Directory</a>
+            <a href="work/blog.html" class="footer-link-item">Insights &amp; Blog</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Ecosystem &amp; Updates</div>
+          <div class="footer-links-list">
+            <a href="blog-posts/how-athena-is-putting-ai-into-practice.html" class="footer-link-item">APLYD (Chief AI Officer) ↗</a>
+            <a href="work/digital-tools-and-platforms.html" class="footer-link-item">TolaData (M&amp;E Software) ↗</a>
+          </div>
+          <div class="footer-newsletter-box">
+            <p style="font-size: 13px; color: rgba(250, 250, 247, 0.65);">Subscribe to Athena’s quarterly development &amp; policy insights:</p>
+            <form class="footer-input-row" onsubmit="event.preventDefault(); alert('Thank you for subscribing.');">
+              <input type="email" placeholder="Your work email" required class="footer-input" aria-label="Work Email" />
+              <button type="submit" class="btn btn-gold btn-sm">Join</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div class="footer-copy">
+          © 2026 Athena Infonomics. All rights reserved.
+        </div>
+        <div class="footer-legal-links">
+          <a href="privacy-policy.html" class="footer-legal-link">Privacy Policy</a>
+          <a href="terms-of-use.html" class="footer-legal-link">Terms of Use</a>
+          <a href="contact.html" class="footer-legal-link">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>
