@@ -568,10 +568,11 @@ button {
 }
 
 .btn-secondary:hover {
-  border-color: var(--gold);
-  color: var(--gold-deep);
-  background-color: var(--offwhite);
+  border-color: var(--gold-deep);
+  color: var(--navy-deep);
+  background-color: var(--gold-pale);
   transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(209, 156, 51, 0.2);
 }
 
 .btn-gold {
@@ -582,9 +583,36 @@ button {
 }
 
 .btn-gold:hover {
-  background-color: var(--gold-deep);
-  border-color: var(--gold-deep);
+  background-color: var(--navy-deep);
+  border-color: var(--navy-deep);
   color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(26, 33, 80, 0.35);
+}
+
+/* Secondary/Outline Buttons in Dark Backgrounds (Heroes, Cards, Footers) */
+.page-hero .btn-secondary,
+.dark-section .btn-secondary,
+.hero-story-glasscard .btn-secondary,
+.footer-dark .btn-secondary,
+.btn-outline-light {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: #FAFAF7;
+  border: 1.5px solid rgba(255, 255, 255, 0.28);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.page-hero .btn-secondary:hover,
+.dark-section .btn-secondary:hover,
+.hero-story-glasscard .btn-secondary:hover,
+.footer-dark .btn-secondary:hover,
+.btn-outline-light:hover {
+  background-color: rgba(255, 255, 255, 0.22) !important;
+  border-color: rgba(255, 255, 255, 0.75) !important;
+  color: #FFFFFF !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
 }
 
 .btn-sm {
@@ -966,8 +994,8 @@ body:has(.custom-cursor-optic.has-tag) .cursor-dot-center {
   border: 1px solid var(--hair);
   border-radius: 12px;
   box-shadow: 0 16px 40px rgba(35, 43, 101, 0.14);
-  padding: 14px;
-  min-width: 320px;
+  padding: 8px;
+  min-width: 220px;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s var(--ease-out-expo), transform 0.3s var(--ease-out-expo), visibility 0.3s;
@@ -992,29 +1020,31 @@ body:has(.custom-cursor-optic.has-tag) .cursor-dot-center {
 }
 
 .dropdown-link {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  padding: 12px 16px;
+  display: block;
+  padding: 10px 16px;
   border-radius: 8px;
-  transition: background var(--transition-fast);
+  transition: background var(--transition-fast), color var(--transition-fast), padding-left var(--transition-fast);
 }
 
 .dropdown-link:hover {
-  background: var(--offwhite);
+  background: var(--gold-pale);
+  padding-left: 20px;
 }
 
 .dropdown-title {
   font-family: var(--font-heading);
   font-weight: 700;
-  font-size: 16px;
+  font-size: 15px;
   color: var(--navy);
+  transition: color var(--transition-fast);
+}
+
+.dropdown-link:hover .dropdown-title {
+  color: var(--navy-deep);
 }
 
 .dropdown-desc {
-  font-size: 13.5px;
-  color: #4A538A;
-  line-height: 1.45;
+  display: none !important;
 }
 
 /* Mobile Menu Toggle Button */
